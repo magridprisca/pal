@@ -14,8 +14,8 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
               <i class="fa fa-cloud-download"></i>
-              <div class="count">6.674</div>
-              <div class="title">Download</div>
+              <!--<div class="count">6.674</div>-->
+              <div class="title">DIREKTORAT PEMBANGUNAN KAPAL</div>
             </div>
             <!--/.info-box-->
           </div>
