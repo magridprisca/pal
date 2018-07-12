@@ -44,7 +44,7 @@
             </label>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button><br/>
         <a href="<?php echo base_url('C_user/register');?>"><button class="btn btn-info btn-lg btn-block" type="button">Signup</button></a>
-      
+        <?php  ?>
       </div>
     </form>
     <div class="text-right">
