@@ -39,12 +39,11 @@
           <input type="password" name="pass" class="form-control" placeholder="Password">
         </div>
         <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
+          <input type="checkbox" value="remember-me"> Remember me
+          <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+        </label>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button><br/>
         <a href="<?php echo base_url('C_user/register');?>"><button class="btn btn-info btn-lg btn-block" type="button">Signup</button></a>
-        <?php  ?>
       </div>
     </form>
     <div class="text-right">
