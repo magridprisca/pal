@@ -15,8 +15,8 @@ class C_profile extends CI_Controller {
 		$data['divisi']=$this->M_division->getAll();
 
     $this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-    $this->load->view('admin/V_profile', $data);
-    $this->load->view('admin/V_footer');
+    $this->load->view('umum/V_profile', $data);
+    $this->load->view('umum/V_footer');
 	}
 
 	public function edit(){

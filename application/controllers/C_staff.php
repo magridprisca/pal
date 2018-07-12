@@ -7,13 +7,12 @@ class C_staff extends CI_Controller {
 		$this->load->model('M_user');
 		$this->load->helper('url_helper');
 	}
-	public function index($page='V_admin'){
+	public function index(){
 		$data['menu']='dashboard';
-		//if(!file_exists(APPPATH."views/admin/".$page.'.php')){show_404();}
 
     $this->load->view('staff/V_header_staff',$data);
-    $this->load->view('admin/V_admin');
-    $this->load->view('admin/V_footer');
+    $this->load->view('umum/V_dashboard');
+    $this->load->view('umum/V_footer');
 	}
 }
 ?>

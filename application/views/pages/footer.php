@@ -1,3 +1,0 @@
-ini footer
-</body>
-</html>
