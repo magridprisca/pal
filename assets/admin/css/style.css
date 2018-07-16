@@ -1840,31 +1840,35 @@ div[data-role="editor-toolbar"] {
 
   text-align: center;
 
-  margin-right: 20px;
+  margin-right: 10px;
 
-  padding-right: 20px;
+  padding-right: 10px;
 
   color: rgba(255, 255, 255, 0.75);
 
 }
 
+.info-box i img{
+  align: center;
+}
+
 .info-box .count {
 
-  margin-top: 20px;
+  margin-top: 20px; text-align: center;
 
-  font-size: 34px;
+  font-size: 20px;
 
-  font-weight: 700;
+  font-weight: 500;
 
 }
 
 .info-box .title {
 
-  font-size: 12px;
+  font-size: 25px; text-align: center;
 
   text-transform: uppercase;
 
-  font-weight: 600;
+  font-weight: 700;
 
 }
 

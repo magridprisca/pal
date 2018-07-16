@@ -13,9 +13,9 @@
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
-              <i class="fa fa-cloud-download"></i>
-              <!--<div class="count">6.674</div>-->
-              <div class="title">DIREKTORAT PEMBANGUNAN KAPAL</div>
+              <i class="image"><img src="assets/dokumen/pal_kapal.png" weight="75px"; height="75px"></i><br>
+              <div class="count">DIREKTORAT</div>
+              <div class="title">PEMBANGUNAN KAPAL</div>
             </div>
             <!--/.info-box-->
           </div>
@@ -23,9 +23,9 @@
 
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box brown-bg">
-              <i class="fa fa-shopping-cart"></i>
-              <div class="count">7.538</div>
-              <div class="title">Purchased</div>
+              <i class="image"><img src="assets/dokumen/pal_maintain.png" weight="75px"; height="75px"></i><br>
+              <div class="count">DIREKTORAT</div>
+              <div class="title">REKAYASA UMUM & HARKAN</div>
             </div>
             <!--/.info-box-->
           </div>
@@ -33,9 +33,9 @@
 
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
-              <i class="fa fa-thumbs-o-up"></i>
-              <div class="count">4.362</div>
-              <div class="title">Order</div>
+              <i class="image"><img src="assets/dokumen/pal_money.png" weight="75px"; height="75px"></i><br>
+              <div class="count">DIREKTORAT</div>
+              <div class="title">KEUANGAN</div>
             </div>
             <!--/.info-box-->
           </div>
@@ -43,9 +43,9 @@
 
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
-              <i class="fa fa-cubes"></i>
-              <div class="count">1.426</div>
-              <div class="title">Stock</div>
+              <i class="image"><img src="assets/dokumen/pal_hr.png" weight="75px"; height="75px"></i><br>
+              <div class="count">DIREKTORAT</div>
+              <div class="title">SDM & UMUM</div>
             </div>
             <!--/.info-box-->
           </div>
