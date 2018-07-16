@@ -53,7 +53,134 @@
 
         </div>
         <!--/.row-->
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <aside>
+              <div id="sidebar1" class="blue-bg ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Design</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Kapal Niaga</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Kapal Perang</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Kapal Selam</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Pemasaran & Penjualan Bangkap</span>
+                      </a>
+                  </li>
+              </div>
+            </aside>
+          </div>
 
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <aside>
+              <div id="sidebar1" class="brown-bg">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Rekayasa Umum</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Pemeliharaan & Perbaikan</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Penjualan REKUMHAR</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Jaminan Kualitas</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Supply Chain</span>
+                      </a>
+                  </li>
+                </div>
+              </aside>
+          </div>
+            <!--/.info-box-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <aside>
+              <div id="sidebar1" class="dark-bg ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Perbendaharaan</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Akutansi</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Teknologi Informasi</span>
+                      </a>
+                  </li>
+                </div>
+              </aside>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <aside>
+              <div id="sidebar1" class="green-bg">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi HCM & Command Media</span>
+                      </a>
+                  </li>
+                  <li <?php if($menu=='profile') echo 'class="active"'; ?>>
+                      <a class="" href="<?php echo base_url('admin') ?>">
+                                  <i class="icon_house_alt"></i>
+                                  <span>Divisi Kawasan</span>
+                      </a>
+                  </li>
+              </div>
+          </aside>
+        </div>
+      </div>
 
         <div class="row">
           <div class="col-lg-9 col-md-12">

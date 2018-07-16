@@ -520,7 +520,14 @@ table tr th { color: #688a7e;}
 
 }
 
+#sidebar1 {
 
+    width: 265px;
+
+    height: 100%;
+
+    margin-right, padding-right: 0px;
+}
 
 .nav-collapse.collapse {
 
@@ -1848,9 +1855,9 @@ div[data-role="editor-toolbar"] {
 
 }
 
-.info-box i img{
+/*.info-box i .image img{
   align: center;
-}
+}*/
 
 .info-box .count {
 
