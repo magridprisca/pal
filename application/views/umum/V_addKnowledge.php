@@ -2,9 +2,8 @@
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-files-o"></i> Form Validation</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_document_alt"></i>Forms</li>
-              <li><i class="fa fa-files-o"></i>Form Validation</li>
+              <li><i class="fa fa-home"></i><a href="<?= base_url($_SESSION['level']);?>">Home</a></li>
+              <li><i class="icon_document_alt"></i>Knowledge</li>
             </ol>
           </div>
         </div>
@@ -19,40 +18,57 @@
                 <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
                     <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Full Name <span class="required">*</span></label>
+                      <label for="cname" class="control-label col-lg-2">Title <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                        <input class="form-control" id="title" name="title" minlength="5" type="text" required />
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="cemail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
+                      <label for="cemail" class="control-label col-lg-2">Category <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control " id="cemail" type="email" name="email" required />
+                        <div class="radio">
+                          <label><input type="radio" name="category" value="0">Engginering</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="category" value="1">Non-Engginering</label>
+                        </div>
                       </div>
                     </div>
-                    <div class="form-group ">
-                      <label for="curl" class="control-label col-lg-2">Website</label>
+                    <div class="form-group">
+                      <label for="divi" class="control-label col-lg-2">Division<span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control " id="curl" type="url" name="url" />
-                      </div>
+                      <select class="form-control m-bot15" name="divisi">
+                          <option>Choose Your Division</option>
+                          <?php foreach($divisi as $div) { ?>
+                            <option value="<?= $div->divisionID ?>"><?= $div->divisionName ?></option>
+                          <?php } ?>
+                      </select>
+                    </div>
                     </div>
                     <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Subject <span class="required">*</span></label>
+                      <label for="cemail" class="control-label col-lg-2">File Type <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+                        <div class="radio">
+                          <label><input type="radio" name="tipe">PDF File</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="tipe">Video</label>
+                        </div>
+                        <div class="radio">
+                          <label><input type="radio" name="tipe">Foto</label>
+                        </div>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">File knowledge <span class="required">*</span></label>
-                      <input class="form-control" type="file" id="exampleInputFile" name="file">
                       <div class="col-lg-10">
-
-                    </div>
+                        <input class="form-control" type="file" id="exampleInputFile" name="file">
+                      </div>
                     </div>
                     <div class="form-group ">
-                      <label for="ccomment" class="control-label col-lg-2">Feedback</label>
+                      <label for="ccomment" class="control-label col-lg-2">Description</label>
                       <div class="col-lg-10">
-                        <textarea class="form-control " id="ccomment" name="comment" required></textarea>
+                        <textarea class="form-control " id="description" name="description" required></textarea>
                       </div>
                     </div>
                     <div class="form-group">

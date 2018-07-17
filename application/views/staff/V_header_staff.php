@@ -237,7 +237,7 @@
                       </a>
             <ul class="sub">
               <li><a class="" href="form_component.html">List Knowledge</a></li>
-              <li><a class="" href="form_validation.html">Create New Knowledge</a></li>
+              <li><a class="" href="<?= base_url('C_knowledge/add');?>">Create New Knowledge</a></li>
             </ul>
           </li>
           <li class="sub-menu <?php if($menu=='discussion') echo 'active'; ?>">

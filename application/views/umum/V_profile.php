@@ -2,7 +2,7 @@
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-user-md"></i> Profile</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="<?php echo base_url('admin') ?>">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="<?php echo base_url($_SESSION['level']) ?>">Home</a></li>
               <li><i class="fa fa-user-md"></i>Profile</li>
             </ol>
           </div>
