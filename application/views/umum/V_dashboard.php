@@ -99,7 +99,7 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
+                      <a class="" href="<?php echo base_url('C_knowledge/read') ?>">
                                   <i class="icon_house_alt"></i>
                                   <span>Divisi Rekayasa Umum</span>
                       </a>

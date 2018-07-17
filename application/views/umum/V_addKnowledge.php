@@ -42,6 +42,13 @@
                         <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
                       </div>
                     </div>
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">File knowledge <span class="required">*</span></label>
+                      <input class="form-control" type="file" id="exampleInputFile" name="file">
+                      <div class="col-lg-10">
+
+                    </div>
+                    </div>
                     <div class="form-group ">
                       <label for="ccomment" class="control-label col-lg-2">Feedback</label>
                       <div class="col-lg-10">

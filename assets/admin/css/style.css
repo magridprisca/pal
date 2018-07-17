@@ -522,6 +522,7 @@ table tr th { color: #688a7e;}
 
 #sidebar1 {
 
+    display: inline-block;
     width: 265px;
 
     height: 100%;

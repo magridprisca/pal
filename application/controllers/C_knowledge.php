@@ -14,5 +14,15 @@ class C_knowledge extends CI_Controller {
     $this->load->view('umum/V_addKnowledge');
     $this->load->view('umum/V_footer');
 	}
+	public function save(){
+
+	}
+
+	public function read(){
+		$data['menu']='dashboard';
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+		$this->load->view('umum/V_files');
+		$this->load->view('umum/V_footer');
+	}
 }
 ?>
