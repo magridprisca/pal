@@ -49,13 +49,13 @@
               <label for="cemail" class="control-label col-lg-2">File Type <span class="required">*</span></label>
               <div class="col-lg-10">
                 <div class="radio">
-                  <label><input type="radio" name="tipe" id="tipe">PDF File</label>
+                  <label><input type="radio" name="tipe" id="tipe" onclick="doSomething('pdf')">PDF File</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="tipe" id="tipe">Video</label>
+                  <label><input type="radio" name="tipe" id="tipe" onclick="doSomething('video')">Video</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="tipe" id="tipe">Foto</label>
+                  <label><input type="radio" name="tipe" id="tipe" onclick="doSomething('foto')">Foto</label>
                 </div>
               </div>
             </div>
@@ -84,3 +84,14 @@
     </section>
   </div>
 </div>
+<script>
+  function doSomething(bentuk){
+    if(bentuk=='pdf'){
+      document.getElementById("InputFile").accept =".pdf";
+    }else if (bentuk=='video') {
+      document.getElementById("InputFile").accept =".mp4,.avi, .3gp, .mpg, .mov";
+    }else {
+      document.getElementById("InputFile").accept =".jpeg,.jpg,.png,.gif";
+    }
+  }
+</script>
