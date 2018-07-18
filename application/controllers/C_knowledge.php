@@ -25,11 +25,12 @@ class C_knowledge extends CI_Controller {
 	    $this->load->view('umum/V_footer');
 		}
 		else {
+			$divi=set_value('divisi');
+			$nama=hash("adler32", basename($_FILES["data"]["name"]), 0);
+			$imageFileType = pathinfo(basename($_FILES["data"]["name"]),PATHINFO_EXTENSION);
+			$target_dir = "assets/upload/".$divi."/".$nama.".".$imageFileType;
 
-			$target_dir = "assets/upload/";
-			$target_file = $target_dir . basename($_FILES["data"]["name"]);
 			$uploadOk = 1;
-			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			// Check if image file is a actual image or fake image
 			$check = getimagesize($_FILES["data"]["tmp_name"]);
 			if($check !== false) {
@@ -40,7 +41,7 @@ class C_knowledge extends CI_Controller {
 				$uploadOk = 0;
 			}
 			// Check if file already exists
-			if (file_exists($target_file)) {
+			if (file_exists($target_dir)) {
 				echo "Sorry, file already exists.";
 				$uploadOk = 0;
 			}
@@ -60,7 +61,7 @@ class C_knowledge extends CI_Controller {
 				echo "Sorry, your file was not uploaded.";
 			// if everything is ok, try to upload file
 			} else {
-				if (move_uploaded_file($_FILES["data"]["tmp_name"], $target_file)) {
+				if (move_uploaded_file($_FILES["data"]["tmp_name"], $target_dir)) {
 					echo "The file ". basename( $_FILES["data"]["name"]). " has been uploaded.";
 				} else {
 					echo "Sorry, there was an error uploading your file.";
@@ -68,21 +69,21 @@ class C_knowledge extends CI_Controller {
 			}
 			if($uploadOk== 1){
 			$data = array(
+				'knowledgeID'		=> set_value('divisi').date("Ymdhis"),
 				'title'					=> set_value('title'),
 				'type'					=> 0,
 				'category'			=> set_value('category'),
 				'divisionID'		=> set_value('divisi'),
-				'file'					=> $target_file,
+				'file'					=> $target_dir,
 				'fileType'			=> set_value('tipe'),
 				'description'		=> set_value('description'),
-				'dateOfUpload'	=> date("Y-m-d h:i:sa"),
+				'dateOfUpload'	=> date("Y-m-d h:i:s"),
 				'userID'				=> $_SESSION['user'],
-				'totalRate'			=> $target_file
+				'totalRate'			=> "2"
 			);
 			$res=$this->M_knowledge->create($data);
 			redirect(base_url($_SESSION['level']));
 			}
-
 		}
 
 
