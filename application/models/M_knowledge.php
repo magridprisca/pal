@@ -5,7 +5,7 @@ class M_knowledge extends CI_Model{
 	}
 
 	public function getAll(){
-		$hasil = $this->db->get('knowledge');
+		$hasil = $this->db->where('knowledge.userID=user.userID')->get('knowledge,user');
 		if($hasil->num_rows() > 0){
 			return $hasil->result();
 		}else {

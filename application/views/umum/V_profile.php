@@ -234,7 +234,7 @@
                             <label class="col-lg-2 control-label">User ID</label>
                             <div class="col-lg-6">
                               <input type="text" class="form-control" name="userid" value="<?= $user->userID?>" readonly>
-                            </div>
+                            </div> 
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Name</label>

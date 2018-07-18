@@ -15,6 +15,19 @@
                     <th style="color: #FFFFFF"><i class="icon_profile"></i> Upload by</th>
                     <th style="color: #FFFFFF"><i class="icon_cogs"></i> Action</th>
                   </tr>
+                  <?php foreach ($knowledge as $key){?>
+                    <tr>
+                      <td><?= $key->title ?></td>
+                      <td><?= $key->dateOfUpload ?></td>
+                      <td><?= $key->description ?></td>
+                      <td><?= $key->name ?></td>
+                      <td>
+                        <div class="btn-group">
+                          <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  <?php } ?>
                   <tr>
                     <td>Angeline Mcclain</td>
                     <td>2004-07-06</td>
