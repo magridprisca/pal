@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="<?php echo base_url() ?>assets/admin/img/favicon.png">
 
-  <title>Creative - Bootstrap Admin Template</title>
+  <title>Knowledge Management System</title>
 
   <!-- Bootstrap CSS -->
   <link href="<?php echo base_url() ?>assets/admin/css/bootstrap.min.css" rel="stylesheet">
@@ -236,7 +236,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="form_component.html">List Knowledge</a></li>
+              <li><a class="" href="<?= base_url('C_knowledge/viewList');?>">List Knowledge</a></li>
               <li><a class="" href="<?= base_url('C_knowledge/add');?>">Create New Knowledge</a></li>
             </ul>
           </li>

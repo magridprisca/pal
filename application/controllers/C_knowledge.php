@@ -85,16 +85,21 @@ class C_knowledge extends CI_Controller {
 			redirect(base_url($_SESSION['level']));
 			}
 		}
-
-
 	}
 
 	public function read(){
 		$data['menu']='dashboard';
-
 		$data['knowledge']=$this->M_knowledge->getAll();
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 		$this->load->view('umum/V_files');
+		$this->load->view('umum/V_footer');
+	}
+
+	public function viewList(){
+		$data['menu']='knowledge';
+		$data['knowledge']=$this->M_knowledge->getAll();
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+		$this->load->view('umum/V_listKnow');
 		$this->load->view('umum/V_footer');
 	}
 }
