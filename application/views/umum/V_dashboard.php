@@ -60,32 +60,27 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/11') ?>">
                                   <span>Divisi Design</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/12') ?>">
                                   <span>Divisi Kapal Niaga</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/13') ?>">
                                   <span>Divisi Kapal Perang</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/14') ?>">
                                   <span>Divisi Kapal Selam</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/15') ?>">
                                   <span>Divisi Pemasaran & Penjualan Bangkap</span>
                       </a>
                   </li>
@@ -100,31 +95,26 @@
                 <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('C_knowledge/read/21') ?>">
-                                  <i class="icon_house_alt"></i>
                                   <span>Divisi Rekayasa Umum</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('C_knowledge/read/22') ?>">
-                                  <i class="icon_house_alt"></i>
                                   <span>Divisi Pemeliharaan & Perbaikan</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('C_knowledge/read/23') ?>">
-                                  <i class="icon_house_alt"></i>
                                   <span>Divisi Penjualan REKUMHAR</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('C_knowledge/read/24') ?>">
-                                  <i class="icon_house_alt"></i>
                                   <span>Divisi Jaminan Kualitas</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('C_knowledge/read/25') ?>">
-                                  <i class="icon_house_alt"></i>
                                   <span>Divisi Supply Chain</span>
                       </a>
                   </li>
@@ -139,20 +129,17 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/31') ?>">
                                   <span>Divisi Perbendaharaan</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/32') ?>">
                                   <span>Divisi Akutansi</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/33') ?>">
                                   <span>Divisi Teknologi Informasi</span>
                       </a>
                   </li>
@@ -166,14 +153,12 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/41') ?>">
                                   <span>Divisi HCM & Command Media</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
-                                  <i class="icon_house_alt"></i>
+                      <a class="" href="<?php echo base_url('C_knowledge/read/42') ?>">
                                   <span>Divisi Kawasan</span>
                       </a>
                   </li>
@@ -182,7 +167,7 @@
         </div>
       </div>
 
-        <div class="row">
+    <div class="row">
           <div class="col-lg-9 col-md-12">
 
             <div class="panel panel-default">

@@ -102,11 +102,22 @@ class C_knowledge extends CI_Controller {
 	}
 
 	public function read($divapa){
-		$data['menu']='dashboard';
-		$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
-		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-		$this->load->view('umum/V_files');
-		$this->load->view('umum/V_footer');
+		$this->form_validation->set_rules('isi','Isi','required');
+		$this->form_validation->set_rules('kateg','Kategori','required');
+
+		if($this->form_validation->run()==false){
+			$data['menu']='dashboard';
+			$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
+			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+			$this->load->view('umum/V_files');
+			$this->load->view('umum/V_footer');
+		}else {
+			$data['menu']='dashboard';
+			$data['knowledge']=$this->M_knowledge->getAllsearch(set_value('kateg'), set_value('isi'));
+			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+			$this->load->view('umum/V_files');
+			$this->load->view('umum/V_footer');
+		}
 	}
 
 	public function viewList(){

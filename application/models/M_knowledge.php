@@ -29,6 +29,14 @@ class M_knowledge extends CI_Model{
 			return array();
 		}
 	}
+	public function getAllsearch($kateg, $cari){
+		$hasil = $this->db->where('knowledge.userID=user.userID and knowledge.'.$kateg.'="%'.$cari.'%"')->get('knowledge,user');
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
   public function create($data){
     $this->db->insert('knowledge', $data);
   }

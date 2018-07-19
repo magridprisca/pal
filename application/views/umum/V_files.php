@@ -5,6 +5,25 @@
           <li><i class="fa fa-home"></i><a href="<?php echo base_url($_SESSION['level']) ?>">Home</a></li>
           <li><i class="fa fa-home"></i>Divisi Rekayasa Umum</li>
         </ol>
+
+        <div class="row collapse navbar-collapse navbar-form1">
+                      <ul><form class="" method="post" action="<?php echo base_url('C_knowledge/read/')?>">
+                            <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                            <li><div class="">
+                            <select class="" name="kateg">
+                              <option>Kategori pencarian</option>
+                              <option value="title">Title</option>
+                              <option value="category">Category</option>
+                              <option value="fileType">File Type</option>
+                              <option value="description">Description</option>
+                              <option value="dateOfUpload">Date</option>
+                              <option value="userID">Upload by</option>
+                            </select>
+                          </div></li>
+                            <li><div><input class="av" placeholder="Search" name="isi"></div></li>
+                            <li><div><button class="btn btn-primary" type="submit">Cari</button></div></li>
+                      </form></ul>
+                </li>
         <section class="panel">
         <table class="table table-advance table-bordered">
                 <tbody>
@@ -28,30 +47,8 @@
                       </td>
                     </tr>
                   <?php } ?>
-                  <tr>
-                    <td>Angeline Mcclain</td>
-                    <td>2004-07-06</td>
-                    <td>dale@chief.info</td>
-                    <td>Rosser</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sung Carlson</td>
-                    <td>2011-01-10</td>
-                    <td>ione.gisela@high.org</td>
-                    <td>Robert Lee</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
-    <section>
+              <section>
   </div>
 </div>
