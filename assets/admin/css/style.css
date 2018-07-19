@@ -538,7 +538,8 @@ table tr th { color: #688a7e;}
 
 
 
-ul.sidebar-menu , ul.sidebar-menu li ul.sub{
+ul.sidebar-menu , ul.sidebar-menu li ul.sub,
+ul.sidebar1-menu1 , ul.sidebar1-menu1 li ul.sub{
 
     margin: -2px 0 0;
 
@@ -553,7 +554,12 @@ ul.sidebar-menu {
     margin-top: 60px;
 
 }
+ul.sidebar1-menu1 {
 
+    margin-top: 0px;
+
+
+}
 
 
 #sidebar > ul > li > ul.sub {
@@ -624,7 +630,7 @@ ul.sidebar-menu li ul.sub li a {
 
 
 
-ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
+ul.sidebar-menu li ul.sub li a:hover, ul.sidebar1-menu li ul.sub li.active a {
 
     color: #fff;
 
@@ -644,7 +650,7 @@ ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
 
 
 
-ul.sidebar-menu li{
+ul.sidebar-menu li, ul.sidebar1-menu1 li{
 
     line-height: 20px !important;
 
@@ -664,7 +670,7 @@ ul.sidebar-menu li{
 
 }*/
 
-ul.sidebar-menu li.sub-menu{
+ul.sidebar-menu li.sub-menu, ul.sidebar1-menu1 li.sub-menu{
 
     line-height: 15px;
 
@@ -674,7 +680,7 @@ ul.sidebar-menu li.sub-menu{
 
 
 
-ul.sidebar-menu li a span{
+ul.sidebar-menu li a span, ul.sidebar1-menu1 li a span{
 
     display: inline-block;
 
@@ -682,7 +688,7 @@ ul.sidebar-menu li a span{
 
 
 
-ul.sidebar-menu li a{
+ul.sidebar-menu li a, ul.sidebar1-menu1 li a{
 
     color: #d0d8df;
 
@@ -722,7 +728,8 @@ ul.sidebar-menu li a{
 
 }*/
 
-ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus,
+ul.sidebar1-menu1 li.active a, ul.sidebar1-menu1 li a:hover, ul.sidebar1-menu1 li a:focus {
 
     background: #2e3b46;
 
@@ -746,13 +753,14 @@ ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 
 }
 
-ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus,
+ul.sidebar1-menu1 li a:hover, ul.sidebar1-menu1 li a:focus {
 
     border-bottom: 1px solid #d0d8df;
 
 }
 
-/*ul.sidebar-menu li.active a,*/ ul.sidebar-menu .sub-menu li.active a{
+/*ul.sidebar-menu li.active a,*/ ul.sidebar-menu .sub-menu li.active a, ul.sidebar1-menu1 .sub-menu li.active a{
 
     border-bottom: 1px solid #d0d8df;
 
@@ -760,7 +768,7 @@ ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
 
 
 
-ul.sidebar-menu li a i {
+ul.sidebar-menu li a i, ul.sidebar1-menu1 li a i {
 
     font-size: 18px;
 

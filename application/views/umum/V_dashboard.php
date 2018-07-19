@@ -58,7 +58,7 @@
             <aside>
               <div id="sidebar1" class="blue-bg ">
                 <!-- sidebar menu start-->
-                <ul class="sidebar-menu">
+                <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('admin') ?>">
                                   <i class="icon_house_alt"></i>
@@ -97,7 +97,7 @@
             <aside>
               <div id="sidebar1" class="brown-bg">
                 <!-- sidebar menu start-->
-                <ul class="sidebar-menu">
+                <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('C_knowledge/read') ?>">
                                   <i class="icon_house_alt"></i>
@@ -137,7 +137,7 @@
             <aside>
               <div id="sidebar1" class="dark-bg ">
                 <!-- sidebar menu start-->
-                <ul class="sidebar-menu">
+                <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('admin') ?>">
                                   <i class="icon_house_alt"></i>
@@ -164,7 +164,7 @@
             <aside>
               <div id="sidebar1" class="green-bg">
                 <!-- sidebar menu start-->
-                <ul class="sidebar-menu">
+                <ul class="sidebar1-menu1">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
                       <a class="" href="<?php echo base_url('admin') ?>">
                                   <i class="icon_house_alt"></i>
