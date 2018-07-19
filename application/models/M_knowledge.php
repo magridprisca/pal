@@ -12,6 +12,23 @@ class M_knowledge extends CI_Model{
 			return array();
 		}
 	}
+
+	public function getAllperDiv($div){
+		$hasil = $this->db->where('knowledge.userID=user.userID and knowledge.divisionID='.$div)->get('knowledge,user');
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
+	public function getAllperUser($id){
+		$hasil = $this->db->where('knowledge.userID=user.userID and knowledge.userID="'.$id.'"')->get('knowledge,user');
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
   public function create($data){
     $this->db->insert('knowledge', $data);
   }

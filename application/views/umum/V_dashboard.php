@@ -99,31 +99,31 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu">
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('C_knowledge/read') ?>">
+                      <a class="" href="<?php echo base_url('C_knowledge/read/21') ?>">
                                   <i class="icon_house_alt"></i>
                                   <span>Divisi Rekayasa Umum</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
+                      <a class="" href="<?php echo base_url('C_knowledge/read/22') ?>">
                                   <i class="icon_house_alt"></i>
                                   <span>Divisi Pemeliharaan & Perbaikan</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
+                      <a class="" href="<?php echo base_url('C_knowledge/read/23') ?>">
                                   <i class="icon_house_alt"></i>
                                   <span>Divisi Penjualan REKUMHAR</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
+                      <a class="" href="<?php echo base_url('C_knowledge/read/24') ?>">
                                   <i class="icon_house_alt"></i>
                                   <span>Divisi Jaminan Kualitas</span>
                       </a>
                   </li>
                   <li <?php if($menu=='profile') echo 'class="active"'; ?>>
-                      <a class="" href="<?php echo base_url('admin') ?>">
+                      <a class="" href="<?php echo base_url('C_knowledge/read/25') ?>">
                                   <i class="icon_house_alt"></i>
                                   <span>Divisi Supply Chain</span>
                       </a>

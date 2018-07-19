@@ -101,9 +101,9 @@ class C_knowledge extends CI_Controller {
 		}
 	}
 
-	public function read(){
+	public function read($divapa){
 		$data['menu']='dashboard';
-		$data['knowledge']=$this->M_knowledge->getAll();
+		$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 		$this->load->view('umum/V_files');
 		$this->load->view('umum/V_footer');
@@ -111,7 +111,7 @@ class C_knowledge extends CI_Controller {
 
 	public function viewList(){
 		$data['menu']='knowledge';
-		$data['knowledge']=$this->M_knowledge->getAll();
+		$data['knowledge']=$this->M_knowledge->getAllperUser($_SESSION['user']);
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 		$this->load->view('umum/V_listKnow');
 		$this->load->view('umum/V_footer');
