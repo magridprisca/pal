@@ -67,7 +67,7 @@ class C_user extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE){
 			$data['err_message']="";
-			$data['divisi']=$this->M_division->getAll();
+			$data['divisi']=$this->M_division->getAllDiv();
 			$this->load->view('V_regist',$data);
 		}
 		else {

@@ -12,7 +12,7 @@ class C_profile extends CI_Controller {
 	public function index(){
 		$data['menu']='profile';
 		$data['user']=$this->M_user->findDetail($_SESSION['user']);
-		$data['divisi']=$this->M_division->getAll();
+		$data['divisi']=$this->M_division->getAllDiv();
 
     $this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
     $this->load->view('umum/V_profile', $data);

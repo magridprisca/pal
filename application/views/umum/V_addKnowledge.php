@@ -49,13 +49,13 @@
               <label for="cemail" class="control-label col-lg-2">File Type <span class="required">*</span></label>
               <div class="col-lg-10">
                 <div class="radio">
-                  <label><input type="radio" name="tipe" id="tipe" onclick="doSomething('pdf')">PDF File</label>
+                  <label><input type="radio" name="tipe" id="tipe" value="pdf" onclick="doSomething('pdf')">PDF File</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="tipe" id="tipe" onclick="doSomething('video')">Video</label>
+                  <label><input type="radio" name="tipe" id="tipe" value="video" onclick="doSomething('video')">Video</label>
                 </div>
                 <div class="radio">
-                  <label><input type="radio" name="tipe" id="tipe" onclick="doSomething('foto')">Foto</label>
+                  <label><input type="radio" name="tipe" id="tipe" value="foto" onclick="doSomething('foto')">Foto</label>
                 </div>
               </div>
             </div>

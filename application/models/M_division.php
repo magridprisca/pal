@@ -12,6 +12,23 @@ class M_division extends CI_Model{
 			return array();
 		}
 	}
+
+	public function getAllDir(){
+		$hasil = $this->db->where('divisionID>=0 and divisionID<=10')->order_by('divisionName')->get('division');
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
+	public function getAllDiv(){
+		$hasil = $this->db->where('divisionID>10 and divisionID<=100')->order_by('divisionName')->get('division');
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
   public function create($data){
     $this->db->insert('division', $data);
   }
