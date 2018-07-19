@@ -23,7 +23,7 @@
                       <td><?= $key->name ?></td>
                       <td>
                         <div class="btn-group">
-                          <a class="btn btn-success" href="#"><i class="fa fa-eye"> See Details</i></a>
+                          <a class="btn btn-success" href="<?= base_url('C_knowledge/detail/'.$key->knowledgeID.'/'.$key->divisionID )?>"><i class="fa fa-eye"> See Details</i></a>
                         </div>
                       </td>
                     </tr>

@@ -117,5 +117,13 @@ class C_knowledge extends CI_Controller {
 		$this->load->view('umum/V_listKnow');
 		$this->load->view('umum/V_footer');
 	}
+	public function detail($id,$divapa){
+		$data['menu']='knowledge';
+		$data['divi']=$this->M_division->findDetail($divapa);
+		$data['knowledge']=$this->M_knowledge->findDetail($id);
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+		$this->load->view('umum/V_Show',$data);
+		$this->load->view('umum/V_footer');
+	}
 }
 ?>
