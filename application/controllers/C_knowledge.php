@@ -102,12 +102,14 @@ class C_knowledge extends CI_Controller {
 	}
 
 	public function read($divapa){
+//>>>>>>>>>>>Head
 		$this->form_validation->set_rules('isi','Isi','required');
 		$this->form_validation->set_rules('kateg','Kategori','required');
 
 		if($this->form_validation->run()==false){
 			$data['menu']='dashboard';
 			$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
+			$data['divi']=$this->M_division->findDetail($divapa);
 			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 			$this->load->view('umum/V_files');
 			$this->load->view('umum/V_footer');
@@ -118,6 +120,14 @@ class C_knowledge extends CI_Controller {
 			$this->load->view('umum/V_files');
 			$this->load->view('umum/V_footer');
 		}
+//=======
+		$data['menu']='dashboard';
+		$data['divi']=$this->M_division->findDetail($divapa);
+		$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+		$this->load->view('umum/V_files');
+		$this->load->view('umum/V_footer');
+//>>>>>>> 98c451949614fc39a72638d0b27576feaa39f6c8
 	}
 
 	public function viewList(){
@@ -125,6 +135,14 @@ class C_knowledge extends CI_Controller {
 		$data['knowledge']=$this->M_knowledge->getAllperUser($_SESSION['user']);
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 		$this->load->view('umum/V_listKnow');
+		$this->load->view('umum/V_footer');
+	}
+	public function detail($id,$divapa){
+		$data['menu']='knowledge';
+		$data['divi']=$this->M_division->findDetail($divapa);
+		$data['knowledge']=$this->M_knowledge->findDetail($id);
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+		$this->load->view('umum/V_Show',$data);
 		$this->load->view('umum/V_footer');
 	}
 }

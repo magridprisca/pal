@@ -180,7 +180,7 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                              <?php if($_SESSION['poto']==null){
+                              <?php if($_SESSION['poto']==null){ 
                                 echo '<img src='.base_url('assets/dokumen/user.jpg').' width=40px>';
                               }else {
                                 echo '<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['poto']).'" width=40px/>';
