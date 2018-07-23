@@ -115,6 +115,7 @@ class C_knowledge extends CI_Controller {
 			$this->load->view('umum/V_footer');
 		}else {
 			$data['menu']='dashboard';
+			$data['divi']=$this->M_division->findDetail($divapa);
 			$data['knowledge']=$this->M_knowledge->getAllsearch(set_value('kateg'), set_value('isi'));
 			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 			$this->load->view('umum/V_files');
