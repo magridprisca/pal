@@ -13,9 +13,11 @@ class M_knowledge extends CI_Model{
 		}
 	}
 
-	public function getAllsearch($kateg, $cari){
-    $hasil = $this->db->where('knowledge.userID=user.userID and knowledge.'.$kateg.'="%'.$cari.'%"')->get('knowledge,user');
-    if($hasil->num_rows() > 0){
+	public function getAllsearch($kateg, $cari,$div){
+    $hasil = $this->db->where("knowledge.userID=user.userID and ".$kateg." Like '%".$cari."%' and knowledge.divisionID=".$div)->get('knowledge,user');
+		//$hasil = $this->db->where("knowledge.userID=user.userID and title LIKE 'lain' and knowledge.divisionID='32'")->get('knowledge,user');
+
+		if($hasil->num_rows() > 0){
       return $hasil->result();
     }else {
       return array();
