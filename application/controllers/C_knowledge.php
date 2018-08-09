@@ -83,7 +83,7 @@ class C_knowledge extends CI_Controller {
 		$this->form_validation->set_rules('isi','Isi','required');
 		$this->form_validation->set_rules('kateg','Kategori','required');
 
-		if($this->form_validation->run()==FALSE){
+		if($this->form_validation->run() == FALSE){
 			$data['menu']='dashboard';
 			$data['divi']=$this->M_division->findDetail($divapa);
 			$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
@@ -94,7 +94,11 @@ class C_knowledge extends CI_Controller {
 		}else {
 			$data['menu']='dashboard';
 			$data['divi']=$this->M_division->findDetail($divapa);
-			$data['knowledge']=$this->M_knowledge->getAllsearch(set_value('kateg'), set_value('isi'));
+			$kat=set_value('kateg');
+			$isi=set_value('isi');
+			$data['cek']= $kat." ".$isi." ".$divapa;
+			//$data['knowledge']=$this->M_knowledge->getAllperDiv($divapa);
+			$data['knowledge']=$this->M_knowledge->getAllsearch($kat, $isi, $divapa);
 			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 			$this->load->view('umum/V_files');
 			$this->load->view('umum/V_footer');

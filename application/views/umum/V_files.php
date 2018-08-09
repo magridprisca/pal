@@ -7,12 +7,20 @@
           <li><i class="icon_document_alt"></i><?php echo ucwords($divi->divisionName); ?></li>
         </ol>
 
+<<<<<<< HEAD
         <section class="panel">
           <div class="collapse navbar-collapse navbar-form1">
               <ul><form class="form-validate" method="post" action="<?php echo base_url('C_knowledge/read/'.$divi->divisionID)?>" >
                     <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
                     <li><div class="">
                     <select class="form-control1 m-bot5" name="kateg">
+=======
+          <div class="row collapse navbar-collapse navbar-form1">
+              <form class="form-inline" method="post" action="<?php echo base_url('C_knowledge/read/'.$divi->divisionID)?>">
+                    <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                    <div class="form-group">
+                    <select class="form-control" name="kateg">
+>>>>>>> ceb986857300e2db31bac6498eb6c2a982e62d2b
                       <option>Kategori pencarian</option>
                       <option value="title">Title</option>
                       <option value="category">Category</option>
@@ -21,12 +29,24 @@
                       <option value="dateOfUpload">Date</option>
                       <option value="userID">Upload by</option>
                     </select>
+<<<<<<< HEAD
                   </div></li>
                     <li><div><input class="av navbar-form1 form-control1 search" placeholder="     Search" name="isi"></div></li>
                     <li><div><button class="btn btn-primary" type="submit">Search</button></div></li>
               </form></ul>
+=======
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control m-input" placeholder="Search" name="isi">
+                    </div>
+                    <div class="form-group">
+                    <button class="btn-sm btn-primary" type="submit">Cari</button>
+                  </div>
+              </form>
+>>>>>>> ceb986857300e2db31bac6498eb6c2a982e62d2b
           </div>
-
+</br>
+      <section class="panel">
         <table class="table table-advance table-bordered">
           <tbody>
             <tr style="background-color: #2A3542">
