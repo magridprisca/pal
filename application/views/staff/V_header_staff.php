@@ -40,24 +40,18 @@
   <!-- container section start -->
   <section id="container" class="">
     <header class="header dark-bg">
-      <div class="toggle-nav">
-        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
-      </div>
-
       <a href="<?php echo base_url('admin');?>" class="logo">
         <img alt="" src="<?php echo base_url() ?>assets/admin/img/logo-pal.png" height="30 px">
       </a>
-      <!--logo end-->
-
-      <div class="nav search-row" id="top_menu">
-        <!--  search form start -->
-        <ul class="nav top-menu">
+      <div class="">
+        <div class="toggle-nav">
+          <div class="" data-original-title="Toggle Navigation" data-placement="bottom"><i class="fa fa-reorder"></i></div>
+        </div>
           <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
+            <form class="">
+              <input class="" placeholder="Search" type="text">
             </form>
           </li>
-        </ul>
         <!--  search form end -->
       </div>
 
@@ -180,7 +174,7 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                              <?php if($_SESSION['poto']==null){ 
+                              <?php if($_SESSION['poto']==null){
                                 echo '<img src='.base_url('assets/dokumen/user.jpg').' width=40px>';
                               }else {
                                 echo '<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['poto']).'" width=40px/>';
@@ -247,7 +241,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="general.html">List Discussion</a></li>
+              <li><a class="" href="<?= base_url('C_discussion');?>">List Discussion</a></li>
               <li><a class="" href="buttons.html">Create New Discussion</a></li>
               <li><a class="" href="grids.html">Favorit</a></li>
             </ul>

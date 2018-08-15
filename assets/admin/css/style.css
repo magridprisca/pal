@@ -3861,6 +3861,7 @@ div[data-role="editor-toolbar"] {
 .task-progress {
 
     float: left;
+    text-align: center;
 
 }
 
@@ -3877,6 +3878,8 @@ div[data-role="editor-toolbar"] {
     padding: 0;
 
     font-weight: 300;
+
+    text-align: center;
 
 }
 

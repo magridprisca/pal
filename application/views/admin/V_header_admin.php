@@ -40,15 +40,12 @@
   <!-- container section start -->
   <section id="container" class="">
     <header class="header dark-bg">
-      <div class="toggle-nav">
-        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
-      </div>
-
       <a href="<?php echo base_url('admin');?>" class="logo">
         <img alt="" src="<?php echo base_url() ?>assets/admin/img/logo-pal.png" height="30 px">
       </a>
-      <!--logo end-->
-
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
       <div class="nav search-row" id="top_menu">
         <!--  search form start -->
         <ul class="nav top-menu">
@@ -58,8 +55,7 @@
             </form>
           </li>
         </ul>
-        <!--  search form end -->
-      </div>
+    </div>
 
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
@@ -248,7 +244,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="general.html">List Discussion</a></li>
+              <li><a class="" href="<?= base_url('C_discussion/index');?>">List Discussion</a></li>
               <li><a class="" href="buttons.html">Create New Discussion</a></li>
               <li><a class="" href="grids.html">Favorit</a></li>
             </ul>
