@@ -30,16 +30,17 @@ class C_knowledge extends CI_Controller {
 			$nama=hash("adler32", basename($_FILES["data"]["name"]), 0);
 			$imageFileType = pathinfo(basename($_FILES["data"]["name"]),PATHINFO_EXTENSION);
 			$target_dir = "assets/upload/".$divi."/".$nama.".".$imageFileType;
+
 			$uploadOk = 1;
 			if (file_exists($target_dir)) {
 				echo "Sorry, file already exists.";
 				$uploadOk = 0;
 			}
 			// Check file size
-			if ($_FILES["data"]["size"] > 500000) {
+			/*if ($_FILES["data"]["size"] > 104857600) {
 				echo "Sorry, your file is too large.";
 				$uploadOk = 0;
-			}
+			}*/
 			// Allow certain file formats
 
 				if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
