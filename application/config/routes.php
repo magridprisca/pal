@@ -8,6 +8,8 @@ $route['admin'] = 'C_admin';
 $route['staff'] = 'C_staff';
 $route['admin/(:any)']='C_user/view/$1';
 
+$route['discuss'] = 'C_discussion';
+
 $route['profile'] = 'C_profile';
 $route['profile/show/(:any)']='C_profile/showProfile/$1';
 

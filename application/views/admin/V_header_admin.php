@@ -244,8 +244,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="<?= base_url('C_discussion/index');?>">List Discussion</a></li>
-              <li><a class="" href="buttons.html">Create New Discussion</a></li>
+              <li><a class="" href="<?= base_url('discuss');?>">List Discussion</a></li>
               <li><a class="" href="grids.html">Favorit</a></li>
             </ul>
           </li>

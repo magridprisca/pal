@@ -25,5 +25,18 @@ class C_discussion extends CI_Controller {
     $this->load->view('admin/V_listDiscussion', $data);
     $this->load->view('umum/V_footer');
 	}
+	public function add(){
+		date_default_timezone_set('Asia/Jakarta');
+		$this->form_validation->set_rules('topick', 'topickDiscuss', 'required');
+		$this->form_validation->set_rules('content', 'contentDiscuss', 'required');
+		$data = array(
+			'topic'		=> $this->input->post('topick'),
+			'discContent'	=> $this->input->post('content'),
+			'dateOfDiscuss' => date('Y-m-d h:i:s'),
+			'userID' => $_SESSION['user']
+		);
+		$this->M_discussion->create($data);
+		redirect(base_url('discuss'));
+	}
 }
 ?>

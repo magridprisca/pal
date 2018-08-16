@@ -59,6 +59,16 @@
           <?php } ?>
         </tbody>
         </table>
+
+        <div>
+          <ul class="pagination pagination-sm pull-right">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">»</a></li>
+          </ul>
+        </div>
 <!--box body-->
         </div>
       </div>
