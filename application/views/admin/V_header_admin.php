@@ -177,9 +177,9 @@
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
                               <?php if($_SESSION['poto']==null){
-                                echo '<img src='.base_url('assets/dokumen/user.jpg').' width=40px>';
+                                echo "<img src=".base_url('assets/upload/users/user.jpg')." width=40px />";
                               }else {
-                                echo '<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['poto']).'" width=40px/>';
+                                echo '<img src='.base_url($_SESSION['poto']).' width=40px/>';
                               }?>
                             </span>
                             <span class="username"><?= $_SESSION['nama'] ?></span>

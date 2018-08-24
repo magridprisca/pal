@@ -28,7 +28,11 @@
                   <li class="<?php if($rep->UserID==$_SESSION['user']){echo "by-other";}else {echo "by-me";} ?>">
                     <!-- Use the class "pull-left" in avatar -->
                     <div class="avatar <?php if($rep->UserID==$_SESSION['user']){echo "pull-right";}else {echo "pull-left";} ?>">
-                      <img src="<?php echo base_url() ?>assets/admin/img/user.jpg" alt="" />
+                      <?php if($rep->userPhoto==null){
+                        echo "<img src=".base_url('assets/upload/users/user.jpg')." width=40px />";
+                      }else {
+                        echo "<img src=".base_url($rep->userPhoto)." width=40px />";
+                      }?>
                     </div>
                     <div class="chat-content">
                       <!-- In meta area, first include "name" and then "time" -->

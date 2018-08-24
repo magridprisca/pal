@@ -18,7 +18,7 @@
                     <?php if($user->userPhoto==null){
                       echo '<img src='.base_url('assets/dokumen/user.jpg').'>';
                     }else {
-                      echo '<img src="data:image/jpeg;base64,'.base64_encode($user->userPhoto).'"/>';
+                      echo '<img src='.base_url($user->userPhoto).' >';
                     }?>
                   </div>
                   <h6><?= $user->divisionName ?></h6>
@@ -234,7 +234,7 @@
                             <label class="col-lg-2 control-label">User ID</label>
                             <div class="col-lg-6">
                               <input type="text" class="form-control" name="userid" value="<?= $user->userID?>" readonly>
-                            </div> 
+                            </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Name</label>
