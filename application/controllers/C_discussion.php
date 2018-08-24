@@ -7,24 +7,29 @@ class C_discussion extends CI_Controller {
     $this->load->model('M_user');
 		$this->load->model('M_discussion');
 		$this->load->helper('url_helper');
+
 	}
 	public function index(){
     $data['user']=$this->M_user->findDetail($_SESSION['user']);
-    $data['discuss']=$this->M_discussion->getAll();
+    $data['discussion']=$this->M_discussion->getList();
+		//$data['discussionTopic']=$this->M_discussion->getcountDiscussion();
     $data['menu']='discussion';
 
     $this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-    $this->load->view('admin/V_listDiscussion', $data);
+    $this->load->view('umum/V_listDiscussion', $data);
     $this->load->view('umum/V_footer');
 	}
-	public function getDiscuss(){
-		$data['discuss']=$this->M_discussion->findDetail();
+
+	public function getDiscuss($id){
+		$data['discuss']=$this->M_discussion->findDetail($id);
 		$data['menu']='discussion';
+		$data['detailReply']=$this->M_discussion->getAll();
 
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-    $this->load->view('admin/V_listDiscussion', $data);
+    $this->load->view('umum/V_doingDiscussion', $data);
     $this->load->view('umum/V_footer');
 	}
+
 	public function add(){
 		date_default_timezone_set('Asia/Jakarta');
 		$this->form_validation->set_rules('topick', 'topickDiscuss', 'required');
