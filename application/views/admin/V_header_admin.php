@@ -46,17 +46,6 @@
       <div class="toggle-nav">
         <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
       </div>
-      <div class="nav search-row" id="top_menu">
-        <!--  search form start -->
-        <ul class="nav top-menu">
-          <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
-            </form>
-          </li>
-        </ul>
-    </div>
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">

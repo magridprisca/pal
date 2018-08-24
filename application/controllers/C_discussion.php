@@ -13,7 +13,6 @@ class C_discussion extends CI_Controller {
 	public function index(){
     $data['user']=$this->M_user->findDetail($_SESSION['user']);
     $data['discussion']=$this->M_discussion->getList();
-		//$data['discussionTopic']=$this->M_discussion->getcountDiscussion();
     $data['menu']='discussion';
 
     $this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
@@ -27,7 +26,7 @@ class C_discussion extends CI_Controller {
 		$data['detailReply']=$this->M_reply->getAllid($id);
 
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-    $this->load->view('umum/V_listDiscussion', $data);
+    $this->load->view('umum/V_doingDiscussion', $data);
     $this->load->view('umum/V_footer');
 	}
 

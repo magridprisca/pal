@@ -43,22 +43,12 @@
       <a href="<?php echo base_url('admin');?>" class="logo">
         <img alt="" src="<?php echo base_url() ?>assets/admin/img/logo-pal.png" height="30 px">
       </a>
-      <div class="">
         <div class="toggle-nav">
           <div class="" data-original-title="Toggle Navigation" data-placement="bottom"><i class="fa fa-reorder"></i></div>
         </div>
-          <li>
-            <form class="">
-              <input class="" placeholder="Search" type="text">
-            </form>
-          </li>
-        <!--  search form end -->
-      </div>
-
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
-
           <!-- inbox notificatoin start-->
           <li id="mail_notificatoin_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -241,7 +231,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="<?= base_url('C_discussion');?>">List Discussion</a></li>
+              <li><a class="" href="<?= base_url('discuss');?>">List Discussion</a></li>
               <li><a class="" href="buttons.html">Create New Discussion</a></li>
               <li><a class="" href="grids.html">Favorit</a></li>
             </ul>
