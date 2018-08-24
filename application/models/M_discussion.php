@@ -18,6 +18,17 @@ class M_discussion extends CI_Model{
 		}
 	}
 
+	public function getAllsearch($category, $cari){
+    $hasil = $this->db->where("discussion.userID=user.userID and " .$category." Like '%".$cari."%'")->get('discussion,user');
+		//$hasil = $this->db->where("knowledge.userID=user.userID and title LIKE 'lain' and knowledge.divisionID='32'")->get('knowledge,user');
+
+		if($hasil->num_rows() > 0){
+      return $hasil->result();
+    }else {
+      return array();
+    }
+  }
+
 	public function getList(){
 		$hasil = $this->db->where('discussion.userID=user.userID')->get('discussion, user');
 		if($hasil->num_rows() > 0){

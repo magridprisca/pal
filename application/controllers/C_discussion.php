@@ -26,7 +26,22 @@ class C_discussion extends CI_Controller {
 		$data['detailReply']=$this->M_discussion->getAll();
 
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-    $this->load->view('umum/V_doingDiscussion', $data);
+    $this->load->view('umum/V_listDiscussion', $data);
+    $this->load->view('umum/V_footer');
+	}
+
+	public function read(){
+		$this->form_validation->set_rules('category','cat','required');
+		$this->form_validation->set_rules('cari','car','required');
+
+		$data['menu']='dashboard';
+		$category=$this->input->post('category');
+		$cari=$this->input->post('cari');
+		$data['cek']= $category." ".$cari;
+		$data['discussion']=$this->M_discussion->getAllsearch($category, $cari);
+
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+    $this->load->view('umum/V_listDiscussion', $data);
     $this->load->view('umum/V_footer');
 	}
 

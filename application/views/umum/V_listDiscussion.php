@@ -5,22 +5,21 @@
       <li><i class="fa fa-home"></i><a href="<?php echo base_url($_SESSION['level']) ?>">Home</a></li>
     </ol>
     <div class="row collapse navbar-collapse navbar-form1">
-      <form class="form-inline" method="post" action="<?php echo base_url()?>">
+      <form class="form-inline" method="post" action="<?php echo base_url('C_discussion/read/')?>">
             <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
             <div class="form-group">
-            <select class="form-control" name="kateg">
+            <select class="form-control" name="category">
               <option>Kategori pencarian</option>
-              <option value="title">Topick</option>
-              <option value="category">Activity</option>
+              <option value="topic">Topic</option>
               <option value="userID">Upload by</option>
             </select>
 
             </div>
             <div class="form-group">
-              <input class="form-control m-input" placeholder="Search" name="isi">
+              <input class="form-control m-input" placeholder="Search" name="cari">
             </div>
             <div class="form-group">
-              <button class="btn-sm btn-primary" type="submit">Cari</button>
+              <button class="btn-sm btn-primary" type="submit" >Cari</button>
             </div>
         </form>
     </div>
@@ -33,14 +32,6 @@
     <div class="row">
       <div class="col-md-12">
         <table class="table table-hover personal-task" style="border-collapse: collapse;">
-          <div class="task-progress col-lg-10">
-            <h1>To Do Everyday</h1>
-          </div>
-          <div class="col-md-2">
-            <span class="profile-ava">
-              <img alt="" class="simple" src="<?php echo base_url() ?>assets/admin/img/avatar1_small.jpg">Jenifer smith
-            </span>
-          </div>
             <tr>
               <td class="btn btn-primary fa fa-plus col-lg-12" colspan="5" style="text-align: center" data-toggle="modal" href="#myModal"> Create New Discussion</td>
             </tr>
@@ -60,9 +51,8 @@
                   <td><?= $dis->dateOfDiscuss ?></td>
                   <td style="text-align: center;">
                     <?php $a=$this->M_discussion->getcountDiscussion($dis->discussID);
-                        ECHO $a->total;
-                     ?>
-                    <?php //$discussionTopic->total ?></td>
+                          echo $a->total;
+                    ?></td>
                   <td><?= $dis->name ?></td>
                   <td>
                     <div class="btn-group">
