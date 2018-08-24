@@ -6,6 +6,7 @@ class C_discussion extends CI_Controller {
 		parent::__construct();
     $this->load->model('M_user');
 		$this->load->model('M_discussion');
+		$this->load->model('M_reply');
 		$this->load->helper('url_helper');
 
 	}
@@ -23,7 +24,7 @@ class C_discussion extends CI_Controller {
 	public function getDiscuss($id){
 		$data['discuss']=$this->M_discussion->findDetail($id);
 		$data['menu']='discussion';
-		$data['detailReply']=$this->M_discussion->getAll();
+		$data['detailReply']=$this->M_reply->getAllid($id);
 
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
     $this->load->view('umum/V_listDiscussion', $data);
@@ -57,6 +58,17 @@ class C_discussion extends CI_Controller {
 		);
 		$this->M_discussion->create($data);
 		redirect(base_url('discuss'));
+	}
+	public function addReply(){
+		date_default_timezone_set('Asia/Jakarta');
+		$data = array(
+			'replyContent'	=>	$this->input->post('isi'),
+			'dateOfReply'		=>	date('Y-m-d h:i:s'),
+			'UserID'				=>	$_SESSION['user'],
+			'discusID'			=>	$this->input->post('discus')
+		);
+		$this->M_reply->create($data);
+		redirect(base_url('C_discussion/getDiscuss/'.$this->input->post('discus')));
 	}
 }
 ?>

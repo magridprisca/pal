@@ -10,7 +10,7 @@
           <!-- Widget -->
           <div class="panel panel-default">
             <div class="panel-heading">
-              <div class="pull-left">Topic: <?= $discuss->topic?></div>
+              <div class="pull-left">Topic: <?= $discuss->topic ?></div>
               <div class="widget-icons pull-right">
                 <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
                 <a href="#" class="wclose"><i class="fa fa-times"></i></a>
@@ -20,63 +20,38 @@
             <div class="panel-body">
               <!-- Widget content -->
               <div class="padd sscroll">
+                <section class="panel">
+                  <div class="bio-graph-heading"><?= $discuss->discContent ?></div>
+                </section>
                 <ul class="chats">
-                  <!-- Chat by us. Use the class "by-me". -->
-                  <li class="by-me">
+                  <?php foreach ($detailReply as $rep){?>
+                  <li class="<?php if($rep->UserID==$_SESSION['user']){echo "by-other";}else {echo "by-me";} ?>">
                     <!-- Use the class "pull-left" in avatar -->
-                    <div class="avatar pull-left">
+                    <div class="avatar <?php if($rep->UserID==$_SESSION['user']){echo "pull-right";}else {echo "pull-left";} ?>">
                       <img src="<?php echo base_url() ?>assets/admin/img/user.jpg" alt="" />
                     </div>
                     <div class="chat-content">
                       <!-- In meta area, first include "name" and then "time" -->
-                      <div class="chat-meta">John Smith <span class="pull-right">3 hours ago</span></div>
-                      Vivamus diam elit diam, consectetur dapibus adipiscing elit.
+                      <div class="chat-meta"><?php if($rep->UserID==$_SESSION['user']){ ?>
+                        <?= $rep->dateOfReply ?> <span class="pull-right"><?= $rep->name ?></span>
+                      <?php }else { ?>
+                        <?= $rep->name ?> <span class="pull-right"><?= $rep->dateOfReply ?></span>
+                      <?php } ?>
+                      </div>
+                      <?= $rep->replyContent ?>
                       <div class="clearfix"></div>
                     </div>
                   </li>
-                  <!-- Chat by other. Use the class "by-other". -->
-                  <li class="by-other">
-                    <!-- Use the class "pull-right" in avatar -->
-                    <div class="avatar pull-right">
-                      <img src="<?php echo base_url() ?>assets/admin/img/user22.png" alt="" />
-                    </div>
-                    <div class="chat-content">
-                      <!-- In the chat meta, first include "time" then "name" -->
-                      <div class="chat-meta">3 hours ago <span class="pull-right">Jenifer Smith</span></div>
-                      Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing elit.
-                      <div class="clearfix"></div>
-                    </div>
-                  </li>
-                  <li class="by-me">
-                    <div class="avatar pull-left">
-                      <img src="<?php echo base_url() ?>assets/admin/img/user.jpg" alt="" />
-                    </div>
-                    <div class="chat-content">
-                      <div class="chat-meta">John Smith <span class="pull-right">4 hours ago</span></div>
-                      Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
-                      <div class="clearfix"></div>
-                    </div>
-                  </li>
-                  <li class="by-other">
-                    <!-- Use the class "pull-right" in avatar -->
-                    <div class="avatar pull-right">
-                      <img src="<?php echo base_url() ?>assets/admin/img/user22.png" alt="" />
-                    </div>
-                    <div class="chat-content">
-                      <!-- In the chat meta, first include "time" then "name" -->
-                      <div class="chat-meta">3 hours ago <span class="pull-right">Jenifer Smith</span></div>
-                      Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
-                      <div class="clearfix"></div>
-                    </div>
-                  </li>
+                  <?php } ?>
                 </ul>
 
               </div>
               <!-- Widget footer -->
               <div class="widget-foot">
-                <form class="form-inline">
+                <form class="form-inline" method="post" action="<?= base_url('C_discussion/addReply') ?>">
                   <div class="form-group col-md-11">
-                    <input type="text" class="form-control" placeholder="Type your message here...">
+                    <input type="text" name="isi" class="form-control" placeholder="Type your answer here...">
+                    <input type="text" name="discus" value="<?= $discuss->discussID ?>" hidden>
                   </div>
                   <button type="submit" class="btn btn-info">Send</button>
                 </form>
