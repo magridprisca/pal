@@ -6,6 +6,7 @@ class C_discussion extends CI_Controller {
 		parent::__construct();
     $this->load->model('M_user');
 		$this->load->model('M_discussion');
+		$this->load->model('M_reply');
 		$this->load->helper('url_helper');
 
 	}
@@ -23,7 +24,7 @@ class C_discussion extends CI_Controller {
 	public function getDiscuss($id){
 		$data['discuss']=$this->M_discussion->findDetail($id);
 		$data['menu']='discussion';
-		$data['detailReply']=$this->M_discussion->getAll();
+		$data['detailReply']=$this->M_reply->getAllid($id);
 
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
     $this->load->view('umum/V_doingDiscussion', $data);
