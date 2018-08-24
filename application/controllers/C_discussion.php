@@ -44,5 +44,16 @@ class C_discussion extends CI_Controller {
 		$this->M_discussion->create($data);
 		redirect(base_url('discuss'));
 	}
+	public function addReply(){
+		date_default_timezone_set('Asia/Jakarta');
+		$data = array(
+			'replyContent'	=>	$this->input->post('isi'),
+			'dateOfReply'		=>	date('Y-m-d h:i:s'),
+			'UserID'				=>	$_SESSION['user'],
+			'discusID'			=>	$this->input->post('discus')
+		);
+		$this->M_reply->create($data);
+		redirect(base_url('C_discussion/getDiscuss/'.$this->input->post('discus')));
+	}
 }
 ?>

@@ -48,9 +48,10 @@
               </div>
               <!-- Widget footer -->
               <div class="widget-foot">
-                <form class="form-inline">
+                <form class="form-inline" method="post" action="<?= base_url('C_discussion/addReply') ?>">
                   <div class="form-group col-md-11">
-                    <input type="text" class="form-control" placeholder="Type your message here...">
+                    <input type="text" name="isi" class="form-control" placeholder="Type your answer here...">
+                    <input type="text" name="discus" value="<?= $discuss->discussID ?>" hidden>
                   </div>
                   <button type="submit" class="btn btn-info">Send</button>
                 </form>
