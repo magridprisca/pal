@@ -16,7 +16,7 @@
                   <h4><?= $user->name ?></h4>
                   <div class="follow-ava">
                     <?php if($user->userPhoto==null){
-                      echo '<img src='.base_url('assets/dokumen/user.jpg').'>';
+                      echo '<img src='.base_url('assets/upload/users/user.jpg').'>';
                     }else {
                       echo '<img src='.base_url($user->userPhoto).' >';
                     }?>
