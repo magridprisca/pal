@@ -23,16 +23,7 @@
                   </div>
                   <h6><?= $user->divisionName ?></h6>
                 </div>
-                <div class="col-lg-4 col-sm-4 follow-info">
-                  <p><i class="fa fa-twitter">twitter_if_needed</i></p>
-                  <p>Last Login</p>
-                  <h6>
-                                    <span><i class="icon_clock_alt"></i>11:05 AM</span>
-                                    <span><i class="icon_calendar"></i>09.07.18</span>
-                                    <span><i class="icon_pin_alt"></i>SUB</span>
-                                </h6>
-                </div>
-                <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                <div class="col-lg-2 col-sm-6 follow-info weather-category pull-right">
                   <ul>
                     <li class="active">
 
@@ -41,16 +32,7 @@
 
                   </ul>
                 </div>
-                <div class="col-lg-2 col-sm-6 follow-info weather-category">
-                  <ul>
-                    <li class="active">
-
-                      <i class="fa fa-bell fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
-                    </li>
-
-                  </ul>
-                </div>
-                <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                <div class="col-lg-2 col-sm-6 follow-info weather-category pull-right">
                   <ul>
                     <li class="active">
 
