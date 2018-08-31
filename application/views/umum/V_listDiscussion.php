@@ -90,12 +90,13 @@
           <div class="modal-body">
             <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?= base_url('C_discussion/add') ?>">
               <div class="form-group ">
-                <label for="topick">Topick<span class="required">*</span></label>
+                <label for="topick" class="control-label col-lg-10" style="text-align: left">Topic<span class="required">*</span></label>
+                <div class="col-lg-10">
                   <input class="form-control" style="width:549px;"  id="topick" name="topick" placeholder="New topick will you discuss">
-              </div></br>
-              <div class="form-group ">
-                <label for="content">Content<span class="required">*</span></label>
-                <textarea class="form-control" cols="70" id="content" name="content" placeholder="What do you think... ."></textarea>
+                </div>
+                <label for="content"  class="control-label col-lg-10" style="text-align: left">Content<span class="required">*</span></label>
+                <div class="col-lg-10">
+                <textarea class="form-control" style="width:549px;" id="content" name="content" placeholder="What do you think... ."></textarea>
               </div>
           </div>
           <div class="modal-footer">
