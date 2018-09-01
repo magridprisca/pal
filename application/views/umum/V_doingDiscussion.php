@@ -43,6 +43,11 @@
                       <?php } ?>
                       </div>
                       <?= $rep->replyContent ?>
+                      <?php if($rep->UserID==$_SESSION['user']){ ?>
+                        <div class="chat-meta">
+                          <span class="pull-right"><a href="<?= base_url('C_discussion/delReply/'.$rep->replyID.'/'.$rep->discusID)?>"><i class="fa fa-trash-o"></i></a></span>
+                        </div>
+                      <?php } ?>
                       <div class="clearfix"></div>
                     </div>
                   </li>

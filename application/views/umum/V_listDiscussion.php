@@ -61,16 +61,6 @@
                   </td>
                 </tr>
               <?php } ?>
-            <tr>
-              <td>Today</td>
-              <td>web design</td>
-              <td><span class="badge bg-important">Upload</span></td>
-              <td>
-                <span class="profile-ava">
-                <img alt="" class="simple" src="<?php echo base_url() ?>assets/admin/img/avatar1_small.jpg">
-                </span>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
