@@ -34,5 +34,16 @@ class C_profile extends CI_Controller {
 			redirect(base_url('profile'));
 		}
 	}
+
+	public function photo(){
+		$this->form_validation->set_rules('poto', 'photo', 'required');
+		if ($this->form_validation->run() == FALSE){
+			$data = array(
+				'userPhoto'	=> $this->input->post(file_get_contents($_FILES['featured_img']['tmp_name']))
+			);
+			$this->M_user->update($_SESSION['user'],$data);
+			redirect(base_url('profile'));
+		}
+	}
 }
 ?>
