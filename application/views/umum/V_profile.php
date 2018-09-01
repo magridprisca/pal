@@ -14,13 +14,19 @@
               <div class="panel-body">
                 <div class="col-lg-2 col-sm-2">
                   <h4><?= $user->name ?></h4>
-                  <div class="follow-ava">
+                  <div class="follow-ava" data-toggle="modal" href="#myModal">
                     <?php if($user->userPhoto==null){
-                      echo '<img src='.base_url('assets/upload/users/user.jpg').'>';
+                      echo '<img class="image" src='.base_url('assets/upload/users/user.jpg').'>
+                            <div class="middle">
+                              <div><i class="fa fa-camera" style="color: 	#696969"></i></div>
+                            </div>';
                     }else {
-                      echo '<img src='.base_url($user->userPhoto).' >';
+                      echo '<img class="image" src='.base_url($user->userPhoto).' >
+                            <div class="middle">
+                              <div><i class="fa fa-camera" style="color: 	#696969"></i></div>
+                            </div>';
                     }?>
-                  </div>
+                    </div>
                   <h6><?= $user->divisionName ?></h6>
                 </div>
                 <div class="col-lg-2 col-sm-6 follow-info weather-category pull-right">
@@ -258,3 +264,26 @@
             </section>
           </div>
         </div>
+
+        <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Change your photo's</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?= base_url('C_discussion/add') ?>">
+                      <div class="form-group ">
+
+                      </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                    <button class="btn btn-success" type="submit" >Save change</button>
+                  </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
