@@ -274,7 +274,11 @@
                     <h4 class="modal-title">Change your photo's</h4>
                   </div>
                   <div class="modal-body">
+<<<<<<< HEAD
                     <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?= base_url('C_profile/photo') ?>">
+=======
+                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?= base_url('C_discussion/add') ?>">
+>>>>>>> 9151010abffe7d60bdfddea09e2a04c6966151a8
                       <div class="form-group ">
 
                       </div>
