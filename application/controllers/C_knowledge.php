@@ -46,7 +46,7 @@ class C_knowledge extends CI_Controller {
 				if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 				&& $imageFileType != "gif" && $imageFileType != "mp4" && $imageFileType != "3gp" && $imageFileType != "mpg"
 				&& $imageFileType != "mov" && $imageFileType != "pdf") {
-					echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+					echo "Sorry, type of your files (".$imageFileType.") not allowed.";
 					$uploadOk = 0;
 				}
 			// Check if $uploadOk is set to 0 by an error
@@ -56,26 +56,24 @@ class C_knowledge extends CI_Controller {
 			} else {
 				if (move_uploaded_file($_FILES["data"]["tmp_name"], $target_dir)) {
 					echo "The file ". basename( $_FILES["data"]["name"]). " has been uploaded.";
+					$data = array(
+						'knowledgeID'		=> set_value('divisi').date("Ymdhis"),
+						'title'					=> set_value('title'),
+						'type'					=> 0,
+						'category'			=> set_value('category'),
+						'divisionID'		=> set_value('divisi'),
+						'file'					=> $target_dir,
+						'fileType'			=> set_value('tipe'),
+						'description'		=> set_value('description'),
+						'dateOfUpload'	=> date("Y-m-d h:i:s"),
+						'userID'				=> $_SESSION['user'],
+						'totalRate'			=> "0"
+					);
+					$res=$this->M_knowledge->create($data);
+					redirect(base_url('C_knowledge/viewList'));
 				} else {
 					echo "Sorry, there was an error uploading your file.";
 				}
-			}
-			if($uploadOk== 1){
-			$data = array(
-				'knowledgeID'		=> set_value('divisi').date("Ymdhis"),
-				'title'					=> set_value('title'),
-				'type'					=> 0,
-				'category'			=> set_value('category'),
-				'divisionID'		=> set_value('divisi'),
-				'file'					=> $target_dir,
-				'fileType'			=> set_value('tipe'),
-				'description'		=> set_value('description'),
-				'dateOfUpload'	=> date("Y-m-d h:i:s"),
-				'userID'				=> $_SESSION['user'],
-				'totalRate'			=> "0"
-			);
-			$res=$this->M_knowledge->create($data);
-			redirect(base_url('C_knowledge/viewList'));
 			}
 		}
 	}

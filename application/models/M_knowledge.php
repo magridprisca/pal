@@ -49,7 +49,7 @@ class M_knowledge extends CI_Model{
     $this->db->where('knowledgeID',$id)->delete('knowledge');
   }
   public function findDetail($id){
-    $hasil = $this->db->where('knowledgeID',$id)->limit(1)->get('knowledge');
+    $hasil = $this->db->where('knowledgeID='.$id.' and knowledge.divisionID=division.divisionID')->limit(1)->get('knowledge,division');
 		if($hasil->num_rows() > 0){
 			return $hasil->row();
 		}else {
