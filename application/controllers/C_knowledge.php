@@ -25,6 +25,12 @@ class C_knowledge extends CI_Controller {
 	    $this->load->view('umum/V_footer');
 		}
 		else {
+				$config['upload_path'] = base_url('assets/upload');
+				$config['allowed_types']='gif|jpg|jpeg|gif|mp3|mp4|3gp|mpg|mov|pdf';
+				$config['max_size']='10240000000';
+				$this->load->library('upload',$config);
+				$this->load->initialize($config);
+
 			date_default_timezone_set('Asia/Jakarta');
 			$divi=set_value('divisi');
 			$nama=hash("adler32", basename($_FILES["data"]["name"]), 0);
@@ -40,7 +46,7 @@ class C_knowledge extends CI_Controller {
 			/*if ($_FILES["data"]["size"] > 104857600) {
 				echo "Sorry, your file is too large.";
 				$uploadOk = 0;
-			}*/
+			}
 			// Allow certain file formats
 
 				if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -48,7 +54,7 @@ class C_knowledge extends CI_Controller {
 				&& $imageFileType != "mov" && $imageFileType != "pdf") {
 					echo "Sorry, type of your files (".$imageFileType.") not allowed.";
 					$uploadOk = 0;
-				}
+				}*/
 			// Check if $uploadOk is set to 0 by an error
 			if ($uploadOk == 0) {
 				echo "Sorry, your file was not uploaded.";

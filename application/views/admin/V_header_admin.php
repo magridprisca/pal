@@ -226,15 +226,21 @@
 							<li><a class="" href="form_component.html">Confirm Knowledge</a></li>
             </ul>
           </li>
-          <li class="sub-menu <?php if($menu=='discussion') echo 'active'; ?>">
-            <a href="javascript:;" class="">
+          <li class="<?php if($menu=='discussion') echo 'active'; ?>">
+            <a href="<?= base_url('discuss');?>" class="">
                           <i class="icon_chat_alt"></i>
                           <span>Discussion</span>
+                      </a>
+          </li>
+          <li class="sub-menu <?php if($menu=='favorit') echo 'active'; ?>">
+            <a href="javascript:;" class="">
+                          <i class="icon_star"></i>
+                          <span>Favorite</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="<?= base_url('discuss');?>">List Discussion</a></li>
-              <li><a class="" href="grids.html">Favorit</a></li>
+              <li><a class="" href="<?= base_url('C_favKno');?>">Favorite Knowledge</a></li>
+              <li><a class="" href="<?= base_url('C_favDis');?>">Favorite Discussion</a></li>
             </ul>
           </li>
         </ul>
