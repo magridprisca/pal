@@ -11,7 +11,6 @@ class C_discussion extends CI_Controller {
 
 	}
 	public function index(){
-    $data['user']=$this->M_user->findDetail($_SESSION['user']);
     $data['discussion']=$this->M_discussion->getList();
     $data['menu']='discussion';
 

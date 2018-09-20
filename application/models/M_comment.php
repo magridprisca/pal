@@ -12,6 +12,20 @@ class M_comment extends CI_Model{
 			return array();
 		}
 	}
+	public function getAllid($id){
+		$this->db->select('*');
+		$this->db->from('knowledge');
+		$this->db->join('comment', 'comment.knowledgeID=knowledge.knowledgeID');
+		$this->db->join('user', 'user.userID=comment.UserID');
+		$this->db->where('comment.knowledgeID',$id);
+		$this->db->order_by('knowledge.knowledgeID', 'asc');
+		$hasil = $this->db->get();
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
   public function create($data){
     $this->db->insert('comment', $data);
   }

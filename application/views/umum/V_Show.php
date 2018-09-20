@@ -27,6 +27,52 @@
           <embed src="<?= base_url($knowledge->file) ?>" width="1100" height="600" type='application/pdf'>
         <?php } ?>
           </div>
+          <div>
+            <address><?= $knowledge->description ?></address>
+          </div>
+          <br/>
+          <div>
+              <ul class="chats">
+                <?php foreach ($comment as $rep){?>
+                <li class="<?php if($rep->userID==$_SESSION['user']){echo "by-other";}else {echo "by-me";} ?>">
+                  <!-- Use the class "pull-left" in avatar -->
+                  <div class="avatar <?php if($rep->userID==$_SESSION['user']){echo "pull-right";}else {echo "pull-left";} ?>">
+                    <?php if($rep->userPhoto==null){
+                      echo "<img src=".base_url('assets/upload/users/user.jpg')." width=40px />";
+                    }else {
+                      echo "<img src=".base_url($rep->userPhoto)." width=40px />";
+                    }?>
+                  </div>
+                  <div class="chat-content">
+                    <!-- In meta area, first include "name" and then "time" -->
+                    <div class="chat-meta"><?php if($rep->userID==$_SESSION['user']){ ?>
+                      <?= $rep->dateOfComment ?> <span class="pull-right"><?= $rep->name ?></span>
+                    <?php }else { ?>
+                      <?= $rep->name ?> <span class="pull-right"><?= $rep->dateOfComment ?></span>
+                    <?php } ?>
+                    </div>
+                    <?= $rep->content ?>
+                    <?php if($rep->userID==$_SESSION['user']){ ?>
+                      <div class="chat-meta">
+                        <span class="pull-right"><a href="<?= base_url('C_comment/del/'.$rep->commentID.'/'.$rep->knowledgeID.'/'.$knowledge->divisionID)?>"><i class="fa fa-trash-o"></i></a></span>
+                      </div>
+                    <?php } ?>
+                    <div class="clearfix"></div>
+                  </div>
+                </li>
+                <?php } ?>
+              </ul>
+          </div>
+              <!-- Widget footer -->
+              <div class="widget-foot">
+                <form class="form-inline" method="post" action="<?= base_url('C_comment/add/'.$knowledge->divisionID) ?>">
+                  <div class="form-group col-md-11">
+                    <input type="text" name="isi" class="form-control" placeholder="Type your answer here...">
+                    <input type="text" name="kno" value="<?= $knowledge->knowledgeID ?>" hidden>
+                  </div>
+                  <button type="submit" class="btn btn-info">Send</button>
+                </form>
+              </div>
       </div>
     </section>
   </div>

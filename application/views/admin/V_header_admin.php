@@ -239,8 +239,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="<?= base_url('C_favKno');?>">Favorite Knowledge</a></li>
-              <li><a class="" href="<?= base_url('C_favDis');?>">Favorite Discussion</a></li>
+              <li><a class="" href="<?= base_url('C_favorite/kno');?>">Favorite Knowledge</a></li>
+              <li><a class="" href="<?= base_url('C_favorite/dis');?>">Favorite Discussion</a></li>
             </ul>
           </li>
         </ul>

@@ -13,6 +13,22 @@ class M_knowledge extends CI_Model{
 		}
 	}
 
+	public function getAllTop(){
+		$this->db->select('dateOfUpload, title, description, count(commentID) as com, name');
+		$this->db->from('knowledge');
+		$this->db->join('comment', 'comment.knowledgeID=knowledge.knowledgeID');
+		$this->db->join('user', 'user.userID=knowledge.UserID');
+		$this->db->group_by('title, description');
+		$this->db->order_by('com', 'desc');
+		$hasil = $this->db->get();
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
+
+
 	public function getAllsearch($kateg, $cari, $div){
     $hasil = $this->db->where("knowledge.userID=user.userID and ".$kateg." Like '%".$cari."%' and knowledge.divisionID=".$div)->get('knowledge,user');
 		//$hasil = $this->db->where("knowledge.userID=user.userID and title LIKE 'lain' and knowledge.divisionID='32'")->get('knowledge,user');
