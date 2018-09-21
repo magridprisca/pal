@@ -137,8 +137,15 @@ public function confirm(){
 	$this->load->view('umum/V_footer');
 }
 
-public function change(){
-	
+public function change($value, $id){
+	$data['menu']='knowledge';
+		$data = array(
+			'type' => $value
+		);
+	$res=$this->M_knowledge->update($data);
+	$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+	$this->load->view('umum/V_konfirmKnowledge');
+	$this->load->view('umum/V_footer');
 }
 }
 ?>
