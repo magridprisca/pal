@@ -14,6 +14,9 @@
       <header class="panel-heading">
         Details Knowledge
       </header>
+      <div class="pull-right">
+        <a href="<?= base_url('C_knowledge/delete/'.$knowledge->knowledgeID) ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i> Hapus Knowledge</a>
+      </div>
       <div class="panel-body">
         <h2 align="center"><?= $knowledge->title ?></h2>
           <div align="center">

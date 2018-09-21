@@ -62,6 +62,8 @@ class M_knowledge extends CI_Model{
     $this->db->where('knowledgeID',$id)->update('knowledge',$data);
   }
   public function delete($id){
+		$row = $this->db->where('knowledgeID',$id)->get('knowledge')->row();
+		unlink(base_url($row->file));
     $this->db->where('knowledgeID',$id)->delete('knowledge');
   }
   public function findDetail($id){

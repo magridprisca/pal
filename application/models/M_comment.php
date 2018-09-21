@@ -35,6 +35,9 @@ class M_comment extends CI_Model{
   public function delete($id){
     $this->db->where('commentID',$id)->delete('comment');
   }
+  public function deleteKnow($id){
+    $this->db->where('knowledgeID',$id)->delete('comment');
+  }
   public function findDetail($id){
     $hasil = $this->db->where('commentID',$id)->limit(1)->get('comment');
 		if($hasil->num_rows() > 0){

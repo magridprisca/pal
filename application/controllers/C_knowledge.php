@@ -128,24 +128,23 @@ class C_knowledge extends CI_Controller {
 		$this->load->view('umum/V_footer');
 	}
 
-public function confirm(){
-	$data['menu']='knowledge';
-	$data['kno0']=$this->M_knowledge->confirmeks(0);
-	$data['kno1']=$this->M_knowledge->confirmeks(1);
-	$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-	$this->load->view('umum/V_konfirmKnowledge');
-	$this->load->view('umum/V_footer');
-}
+	public function confirm(){
+		$data['menu']='knowledge';
+		$data['kno0']=$this->M_knowledge->confirmeks(0);
+		$data['kno1']=$this->M_knowledge->confirmeks(1);
+		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+		$this->load->view('umum/V_konfirmKnowledge');
+		$this->load->view('umum/V_footer');
+	}
 
-public function change($value, $id){
-	$data['menu']='knowledge';
-		$data = array(
-			'type' => $value
-		);
-	$res=$this->M_knowledge->update($data);
-	$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-	$this->load->view('umum/V_konfirmKnowledge');
-	$this->load->view('umum/V_footer');
-}
+	public function change(){
+
+	}
+
+	public function delete($id){
+		$this->M_comment->deleteKnow($id);
+		$this->M_knowledge->delete($id);
+		redirect(base_url('C_knowledge/viewList'));
+	}
 }
 ?>
