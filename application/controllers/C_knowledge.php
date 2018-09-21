@@ -6,6 +6,7 @@ class C_knowledge extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_division');
 		$this->load->model('M_knowledge');
+		$this->load->model('M_comment');
 		$this->load->helper('url_helper');
 	}
 	public function add(){
@@ -121,6 +122,7 @@ class C_knowledge extends CI_Controller {
 		$data['menu']='knowledge';
 		$data['divi']=$this->M_division->findDetail($divapa);
 		$data['knowledge']=$this->M_knowledge->findDetail($id);
+		$data['comment']=$this->M_comment->getAllid($id);
 		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
 		$this->load->view('umum/V_Show',$data);
 		$this->load->view('umum/V_footer');

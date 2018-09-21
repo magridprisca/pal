@@ -18,6 +18,21 @@ class M_discussion extends CI_Model{
 		}
 	}
 
+	public function getAllTop(){
+		$this->db->select('dateOfDiscuss, topic, discContent, count(replyContent) as tot, name');
+		$this->db->from('discussion');
+		$this->db->join('replydiscussion', 'replydiscussion.discusID=discussion.discussID');
+		$this->db->join('user', 'user.userID=discussion.UserID');
+		$this->db->group_by('topic, discContent');
+		$this->db->order_by('tot', 'desc');
+		$hasil = $this->db->get();
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
+
 	public function getAllsearch($category, $cari){
     $hasil = $this->db->where("discussion.userID=user.userID and " .$category." Like '%".$cari."%'")->get('discussion,user');
 		//$hasil = $this->db->where("knowledge.userID=user.userID and title LIKE 'lain' and knowledge.divisionID='32'")->get('knowledge,user');
