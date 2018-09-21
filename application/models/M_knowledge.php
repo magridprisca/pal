@@ -55,6 +55,19 @@ class M_knowledge extends CI_Model{
 		}else {
 			return array();
 		}
-  }
+  } //taksit=0, eksplisit=1
+	public function confirmeks($type){
+		$hasil = $this->db->select('knowledge.title, user.name');
+		$hasil = $this->db->from('knowledge');
+		$hasil = $this->db->join('user');
+		$hasil = $this->db->ON('knowledge.userID=user.userID');
+		$hasil = $this->db->where('type = '.$type);
+		$query->$hasil->db->get();
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
 }
 ?>

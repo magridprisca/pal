@@ -223,7 +223,7 @@
             <ul class="sub">
               <li><a class="" href="<?= base_url('C_knowledge/viewList');?>">List Knowledge</a></li>
               <li><a class="" href="<?= base_url('C_knowledge/add');?>">Create New Knowledge</a></li>
-							<li><a class="" href="form_component.html">Confirm Knowledge</a></li>
+							<li><a class="" href="<?= base_url('C_knowledge/confirm');?>" >Confirm Knowledge</a><?php if($kno->type==1)?></li>
             </ul>
           </li>
           <li class="<?php if($menu=='discussion') echo 'active'; ?>">

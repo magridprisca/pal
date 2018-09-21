@@ -21,12 +21,14 @@ class C_profile extends CI_Controller {
 
 	public function edit(){
 		$this->form_validation->set_rules('name', 'Full Name', 'required');
+		$this->form_validation->set_rules('password', 'password', 'required');
 		$this->form_validation->set_rules('userID', 'Username', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('divisi', 'Division', 'required');
 		if ($this->form_validation->run() == FALSE){
 			$data = array(
 				'name'		=> set_value('name'),
+				'password' => set_value('password'),
 				'divisionID'	=> set_value('divisi'),
 				'userEmail'		=> set_value('email')
 			);
