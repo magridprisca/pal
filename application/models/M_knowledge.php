@@ -63,8 +63,8 @@ class M_knowledge extends CI_Model{
   }
   public function delete($id){
 		$row = $this->db->where('knowledgeID',$id)->get('knowledge')->row();
-		unlink(base_url($row->file));
-    $this->db->where('knowledgeID',$id)->delete('knowledge');
+		unlink($row->file);
+  	$this->db->where('knowledgeID',$id)->delete('knowledge');
   }
   public function findDetail($id){
     $hasil = $this->db->where('knowledgeID='.$id.' and knowledge.divisionID=division.divisionID')->limit(1)->get('knowledge,division');
@@ -75,7 +75,7 @@ class M_knowledge extends CI_Model{
 		}
   } //taksit=0, eksplisit=1
 	public function confirmeks($type){
-		$this->db->select('knowledge.title, user.name');
+		$this->db->select('*');
 		$this->db->from('knowledge');
 		$this->db->join('user', 'knowledge.userID=user.userID');
 		$this->db->where('type = '.$type);
