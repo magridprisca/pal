@@ -43,20 +43,6 @@ class C_knowledge extends CI_Controller {
 				echo "Sorry, file already exists.";
 				$uploadOk = 0;
 			}
-			// Check file size
-			/*if ($_FILES["data"]["size"] > 104857600) {
-				echo "Sorry, your file is too large.";
-				$uploadOk = 0;
-			}
-			// Allow certain file formats
-
-				if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-				&& $imageFileType != "gif" && $imageFileType != "mp4" && $imageFileType != "3gp" && $imageFileType != "mpg"
-				&& $imageFileType != "mov" && $imageFileType != "pdf") {
-					echo "Sorry, type of your files (".$imageFileType.") not allowed.";
-					$uploadOk = 0;
-				}*/
-			// Check if $uploadOk is set to 0 by an error
 			if ($uploadOk == 0) {
 				echo "Sorry, your file was not uploaded.";
 			// if everything is ok, try to upload file
@@ -137,8 +123,13 @@ class C_knowledge extends CI_Controller {
 		$this->load->view('umum/V_footer');
 	}
 
-	public function change(){
-
+	public function change($value, $id){
+		$data['menu']='knowledge';
+		$data = array(
+			'type'	=> $value
+		);
+		$res=$this->M_knowledge->update($id, $data);
+		redirect(base_url('C_knowledge/confirm'));
 	}
 
 	public function delete($id){

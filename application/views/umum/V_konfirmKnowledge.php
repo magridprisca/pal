@@ -48,7 +48,7 @@
                                     <td><?= $knowledge->title ?></td>
                                     <td><?= $knowledge->name ?></td>
                                     <td style="text-align: center;">
-                                        <a class="btn btn-success" href="<?= base_url('C_knowledge/change/1/'.$knowledge->knowledgeID)?>"><i class="fa fa-eye"> Change to eksplisit type</i></a>
+                                        <a class="btn btn-success" href="<?= base_url('C_knowledge/change/0/'.$knowledge->knowledgeID)?>"><i class="fa fa-eye"> Change to eksplisit type</i></a>
                                     </td>
                                   </tr>
                                 <?php } ?>

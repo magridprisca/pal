@@ -28,7 +28,7 @@ class C_profile extends CI_Controller {
 		if ($this->form_validation->run() == FALSE){
 			$data = array(
 				'name'		=> set_value('name'),
-				'password' => set_value('password'),
+				'password'	=> sha1(md5(sha1(set_value('password')))),
 				'divisionID'	=> set_value('divisi'),
 				'userEmail'		=> set_value('email')
 			);
