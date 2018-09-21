@@ -73,7 +73,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Password</label>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="password" name="password" value="<?= $user->password ?>">
+                              <input type="password" class="form-control" id="password" name="password">
                             </div>
                           </div>
                           <div class="form-group">

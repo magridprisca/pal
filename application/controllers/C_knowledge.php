@@ -128,12 +128,17 @@ class C_knowledge extends CI_Controller {
 		$this->load->view('umum/V_footer');
 	}
 
-public function confirm($type){
+public function confirm(){
 	$data['menu']='knowledge';
-	$data['kno']=$this->M_knowledge->confirmeks($type);
+	$data['kno0']=$this->M_knowledge->confirmeks(0);
+	$data['kno1']=$this->M_knowledge->confirmeks(1);
 	$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-	$this->load->view('umum/V_konfirmKnowledge', $type);
+	$this->load->view('umum/V_konfirmKnowledge');
 	$this->load->view('umum/V_footer');
+}
+
+public function change(){
+	
 }
 }
 ?>
