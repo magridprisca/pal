@@ -55,6 +55,15 @@ class M_knowledge extends CI_Model{
 			return array();
 		}
 	}
+
+	public function getAllSearchperUser($kateg, $cari, $id){
+		$hasil = $this->db->where("knowledge.userID=user.userID and ".$kateg." Like '%".$cari."%' and knowledge.userID='".$id."'")->get('knowledge,user');
+		if($hasil->num_rows() > 0){
+			return $hasil->result();
+		}else {
+			return array();
+		}
+	}
   public function create($data){
     $this->db->insert('knowledge', $data);
   }

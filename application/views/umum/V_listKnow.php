@@ -4,6 +4,31 @@
     <ol class="breadcrumb">
       <li><i class="fa fa-home"></i><a href="<?php echo base_url($_SESSION['level']) ?>">Home</a></li>
     </ol>
+
+    <div class="row collapse navbar-collapse navbar-form1">
+      <form class="form-inline" method="post" action="<?php echo base_url('C_knowledge/viewList')?>">
+            <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+            <div class="form-group">
+            <select class="form-control" name="kateg">
+              <option value="">Kategori pencarian</option>
+              <option value="title">Title</option>
+              <option value="category">Category</option>
+              <option value="fileType">File Type</option>
+              <option value="description">Description</option>
+              <option value="dateOfUpload">Date</option>
+              <option value="userID">Upload by</option>
+            </select>
+
+            </div>
+            <div class="form-group">
+            <input class="form-control m-input" placeholder="Search" name="isi">
+            </div>
+            <div class="form-group">
+            <button class="btn-sm btn-primary" type="submit">Cari</button>
+          </div>
+      </form>
+  </div>
+</br>
         <section class="panel">
         <table class="table table-advance table-bordered">
                 <tbody>

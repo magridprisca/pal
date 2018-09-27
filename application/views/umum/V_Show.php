@@ -30,6 +30,11 @@
           <div class="embed-responsive embed-responsive-4by3-" align="center">
             <iframe width="1000" height="600" class="embed-responsive-item" src="<?= base_url($knowledge->file) ?>" allowfullscreen></iframe>
           </div>
+        <?php } elseif ($knowledge->fileType=='mp3') {?>
+          <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="<?= base_url($knowledge->file) ?>" type="audio/mpeg">
+          </audio>
         <?php } else {?>
           <embed src="<?= base_url($knowledge->file) ?>" width="1100" height="600" type='application/pdf'>
         <?php } ?>

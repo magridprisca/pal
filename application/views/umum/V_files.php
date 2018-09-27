@@ -10,7 +10,7 @@
                 <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
                 <div class="form-group">
                 <select class="form-control" name="kateg">
-                  <option>Kategori pencarian</option>
+                  <option value="">Kategori pencarian</option>
                   <option value="title">Title</option>
                   <option value="category">Category</option>
                   <option value="fileType">File Type</option>

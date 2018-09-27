@@ -27,7 +27,7 @@ class C_knowledge extends CI_Controller {
 		}
 		else {
 				$config['upload_path'] = base_url('assets/upload');
-				$config['allowed_types']='gif|jpg|jpeg|gif|mp3|mp4|3gp|mpg|mov|pdf';
+				$config['allowed_types']='gif|jpg|jpeg|gif|mp3|mp4|3gp|mpg|mov|pdf|mp3';
 				$config['max_size']='10240000000';
 				$this->load->library('upload',$config);
 				$this->load->initialize($config);
@@ -98,11 +98,24 @@ class C_knowledge extends CI_Controller {
 	}
 
 	public function viewList(){
-		$data['menu']='knowledge';
-		$data['knowledge']=$this->M_knowledge->getAllperUser($_SESSION['user']);
-		$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
-		$this->load->view('umum/V_listKnow');
-		$this->load->view('umum/V_footer');
+		$this->form_validation->set_rules('isi','Isi','required');
+		$this->form_validation->set_rules('kateg','Kategori','required');
+
+		if($this->form_validation->run() == FALSE){
+			$data['menu']='knowledge';
+			$data['knowledge']=$this->M_knowledge->getAllperUser($_SESSION['user']);
+			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+			$this->load->view('umum/V_listKnow');
+			$this->load->view('umum/V_footer');
+		} else {
+			$data['menu']='knowledge';
+			$kat=set_value('kateg');
+			$isi=set_value('isi');
+			$data['knowledge']=$this->M_knowledge->getAllSearchperUser($kat, $isi, $_SESSION['user']);
+			$this->load->view($_SESSION['level'].'/V_header_'.$_SESSION['level'],$data);
+			$this->load->view('umum/V_listKnow');
+			$this->load->view('umum/V_footer');
+		}
 	}
 	public function detail($id,$divapa){
 		$data['menu']='knowledge';

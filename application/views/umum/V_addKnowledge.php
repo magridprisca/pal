@@ -57,6 +57,9 @@
                 <div class="radio">
                   <label><input type="radio" name="tipe" id="tipe" value="foto" onclick="doSomething('foto')">Foto</label>
                 </div>
+                <div class="radio">
+                  <label><input type="radio" name="tipe" id="tipe" value="mp3" onclick="doSomething('mp3')">MP3</label>
+                </div>
               </div>
             </div>
             <div class="form-group">
@@ -90,6 +93,8 @@
       document.getElementById("InputFile").accept =".pdf";
     }else if (bentuk=='video') {
       document.getElementById("InputFile").accept =".mp4,.avi, .3gp, .mpg, .mov";
+    }else if (bentuk=='mp3') {
+      document.getElementById("InputFile").accept =".mp3";
     }else {
       document.getElementById("InputFile").accept =".jpeg,.jpg,.png,.gif";
     }
