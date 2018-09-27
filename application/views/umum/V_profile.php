@@ -73,7 +73,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Password</label>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="password" name="password">
+                              <input type="password" class="form-control" id="password" name="password" placeholder="leave it blank if you don't want to change the password">
                             </div>
                           </div>
                           <div class="form-group">
@@ -120,9 +120,10 @@
                     <h4 class="modal-title">Change your photo's</h4>
                   </div>
                   <div class="modal-body">
-                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?= base_url('C_profile/photo') ?>">
+                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?= base_url('C_profile/photo') ?>" enctype="multipart/form-data">
+                      <label for="cname" class="control-label">File photo... <span class="required">*</span></label>
                       <div class="form-group ">
-
+                        <input class="form-control" type="file" id="InputFile" name="data" accept=".jpeg,.jpg,.png,.gif">
                       </div>
                   <div class="modal-footer">
                     <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>

@@ -16,7 +16,7 @@
             </a>
           </li>
           <li>
-            <a data-toggle="tab" href="#eks">
+            <a data-toggle="tab" href="#profile">
                 <i class="icon-user"></i>Eksplisit
             </a>
           </li>
@@ -26,13 +26,7 @@
         <div class="tab-content">
           <!--Project taksit start-->
           <div id="recent-activity" class="tab-pane active">
-<<<<<<< HEAD
-                <div class="activity-body act-in">
-                  <span class="arrow"></span>
-                  <!--Project Activity start-->
-=======
               <div class="act-time">
->>>>>>> 350525bb88932b0b9c81884d59aad760f68eb144
                     <div class="panel-body progress-panel">
                         <div class="col-md-12">
                           <table class="table table-hover personal-task" style="border-collapse: collapse;">
@@ -62,73 +56,31 @@
                 </div>
             </div>
             <!--Project eksplisit start-->
-                  <div id="profile" class="tab-pane">
-                        <div class="panel-body progress-panel">
-                          <div class="col-md-12">
-                            <table class="table table-hover personal-task" style="border-collapse: collapse;">
-                                <thead>
-                                  <tr style="background-color: #2A3542">
-                                    <th width="250px" style="color: #FFFFFF"><i class=""> </i> Knowledge name</th>
-                                    <th width="150px" style="color: #FFFFFF"><i class=""></i> Upload by</th>
-                                    <th width="150px" style="color: #FFFFFF; text-align: center"><i class="icon_cogs"></i> Action</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <?php foreach ($kno1 as $knowledge){?>
-                                    <tr>
-                                      <td><?= $knowledge->title ?></td>
-                                      <td><?= $knowledge->name ?></td>
-                                      <td style="text-align: center;">
-                                          <a class="btn btn-success" href="<?= base_url('C_knowledge/change/0/'.$knowledge->knowledgeID)?>"><i class="fa fa-eye"> Change to eksplisit type</i></a>
-                                      </td>
-                                    </tr>
-                                  <?php } ?>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-<<<<<<< HEAD
+          <div id="profile" class="tab-pane">
+                <div class="panel-body progress-panel">
+                  <div class="col-md-12">
+                    <table class="table table-hover personal-task" style="border-collapse: collapse;">
+                        <thead>
+                          <tr style="background-color: #2A3542">
+                            <th width="250px" style="color: #FFFFFF"><i class=""> </i> Knowledge name</th>
+                            <th width="150px" style="color: #FFFFFF"><i class=""></i> Upload by</th>
+                            <th width="150px" style="color: #FFFFFF; text-align: center"><i class="icon_cogs"></i> Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php foreach ($kno1 as $knowledge){?>
+                            <tr>
+                              <td><?= $knowledge->title ?></td>
+                              <td><?= $knowledge->name ?></td>
+                              <td style="text-align: center;">
+                                  <a class="btn btn-success" href="<?= base_url('C_knowledge/change/0/'.$knowledge->knowledgeID)?>"><i class="fa fa-eye"> Change to eksplisit type</i></a>
+                              </td>
+                            </tr>
+                          <?php } ?>
+                      </tbody>
+                    </table>
                   </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="eks" class="tab-pane">
-                <div class="activity-body act-in">
-                  <span class="arrow"></span>
-                  <!--Project Activity start-->
-                    <div class="panel-body progress-panel">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <table class="table table-hover personal-task" style="border-collapse: collapse;">
-                              <thead>
-                                <tr style="background-color: #2A3542">
-                                  <th width="250px" style="color: #FFFFFF"><i class=""> </i> Knowledge Title</th>
-                                  <th width="250px" style="color: #FFFFFF"><i class=""> </i> Descrption</th>
-                                  <th width="150px" style="color: #FFFFFF"><i class=""></i> Upload by</th>
-                                  <th width="150px" style="color: #FFFFFF; text-align: center"><i class="icon_cogs"></i> Action</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <?php foreach ($kno1 as $knowl){?>
-                                  <tr>
-                                    <td><?= $knowl->title ?></td>
-                                    <td><?= $knowl->description ?></td>
-                                    <td><?= $knowl->name ?></td>
-                                    <td style="text-align: center;">
-                                        <a class="btn btn-success" href="<?= base_url('C_knowledge/change/0/'.$knowl->knowledgeID)?>"><i class="fa fa-eye"> Change to eksplisit type</i></a>
-                                    </td>
-                                  </tr>
-                                <?php } ?>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          </div>
-        </div>
-      </div>
-    </section>
-=======
-                    </div>
->>>>>>> 350525bb88932b0b9c81884d59aad760f68eb144

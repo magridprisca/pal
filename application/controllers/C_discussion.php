@@ -68,6 +68,11 @@ class C_discussion extends CI_Controller {
 		$this->M_reply->create($data);
 		redirect(base_url('C_discussion/getDiscuss/'.$this->input->post('discus')));
 	}
+
+	public function delete($id){
+		$this->M_discussion->delete($id);
+		redirect(base_url('discuss'));
+	}
 	public function delReply($id,$idDis){
 		$this->M_reply->delete($id);
 		redirect(base_url('C_discussion/getDiscuss/'.$idDis));

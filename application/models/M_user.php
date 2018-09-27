@@ -43,6 +43,8 @@ class M_user extends CI_Model{
     $this->db->insert('user', $data);
   }
   public function update($id, $data){
+		$row = $this->db->where('userID',$id)->get('user')->row();
+		unlink($row->userPhoto);
     $this->db->where('userID',$id)->update('user',$data);
   }
   public function delete($id){

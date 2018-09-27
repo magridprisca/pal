@@ -12,6 +12,9 @@
             <div class="panel-heading">
               <div class="pull-left">Topic: <?= $discuss->topic ?></div>
               <div class="widget-icons pull-right">
+              <?php if($discuss->userID==$_SESSION['user']){ ?>
+                  <a href="#myModal2" data-toggle="modal"><i class="fa fa-trash-o"></i></a>
+              <?php }?>
                 <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
                 <a href="#" class="wclose"><i class="fa fa-times"></i></a>
               </div>
@@ -19,6 +22,7 @@
             </div>
             <div class="panel-body">
               <!-- Widget content -->
+
               <div class="padd sscroll">
                 <section class="panel">
                   <div class="bio-graph-heading"><?= $discuss->discContent ?></div>
@@ -71,5 +75,26 @@
       </div>
     </section>
 <!--template-->
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">Delete Confirmation</h4>
+	  </div>
+	  <div class="modal-body">
+
+		Are you sure to delete Discussion with title <?= $discuss->topic ?>
+
+	  </div>
+	  <div class="modal-footer">
+		<button data-dismiss="modal" class="btn btn-default" type="button">No</button>
+		<a href="<?= base_url('C_discussion/delete/'.$discuss->discussID) ?>"><button class="btn btn-danger" type="button"> Yes</button></a>
+	  </div>
+	</div>
   </div>
 </div>

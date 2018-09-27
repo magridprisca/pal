@@ -57,10 +57,10 @@ class M_discussion extends CI_Model{
     $this->db->insert('discussion', $data);
   }
   public function update($id, $data){
-    $this->db->where('discussionID',$id)->update('discussion',$data);
+    $this->db->where('discussID',$id)->update('discussion',$data);
   }
   public function delete($id){
-    $this->db->where('discussionID',$id)->delete('discussion');
+    $this->db->where('discussID',$id)->delete('discussion');
   }
   public function findDetail($id){
     $hasil = $this->db->where('discussID',$id)->limit(1)->get('discussion');

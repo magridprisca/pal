@@ -51,6 +51,10 @@
 <script src="<?php echo base_url() ?>assets/admin/js/charts.js"></script>
 <script src="<?php echo base_url() ?>assets/admin/js/jquery.slimscroll.min.js"></script>
 <script>
+
+function goBack(){
+  window.history.back();
+}
 //knob
 $(function() {
   $(".knob").knob({

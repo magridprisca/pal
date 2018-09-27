@@ -46,7 +46,9 @@
         <div class="toggle-nav">
           <div class="" data-original-title="Toggle Navigation" data-placement="bottom"><i class="fa fa-reorder"></i></div>
         </div>
-      <div class="top-nav notification-row">
+        <div class="top-nav notification-row">
+          <!-- notificatoin dropdown start-->
+          <ul class="nav pull-right top-menu">
           <!-- user login dropdown start-->
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">

@@ -4,14 +4,7 @@
     <ol class="breadcrumb">
       <li><i class="fa fa-home"></i><a href="<?php echo base_url($_SESSION['level']) ?>">Home</a></li>
     </ol>
-  </div>
-</div>
-</br>
-<!--Project Activity start-->
 <section class="panel">
-  <div class="panel-body progress-panel">
-    <div class="row">
-      <div class="col-md-12">
         <table class="table table-hover personal-task" style="border-collapse: collapse;">
             <thead>
               <tr style="background-color: #2A3542">
@@ -34,7 +27,6 @@
               <?php } ?>
           </tbody>
         </table>
-      </div>
+      </section>
     </div>
   </div>
-</section>

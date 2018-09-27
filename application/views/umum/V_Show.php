@@ -14,9 +14,13 @@
       <header class="panel-heading">
         Details Knowledge
       </header>
-      <div class="pull-right">
-        <a href="<?= base_url('C_knowledge/delete/'.$knowledge->knowledgeID) ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i> Hapus Knowledge</a>
-      </div>
+      <button class="btn btn-primary" onclick="goBack()"><i class="fa fa-arrow-left"></i> Back</button>
+      <?php if($knowledge->userID==$_SESSION['user']){ ?>
+        <div class="pull-right">
+          <button class="btn btn-danger" data-toggle="modal" href="#myModal2"><i class="fa fa-trash-o"></i> Delete Knowledge</button>
+        </div>
+      <?php }?>
+
       <div class="panel-body">
         <h2 align="center"><?= $knowledge->title ?></h2>
           <div align="center">
@@ -57,10 +61,31 @@
                     <?= $rep->content ?>
                     <?php if($rep->userID==$_SESSION['user']){ ?>
                       <div class="chat-meta">
-                        <span class="pull-right"><a href="<?= base_url('C_comment/del/'.$rep->commentID.'/'.$rep->knowledgeID.'/'.$knowledge->divisionID)?>"><i class="fa fa-trash-o"></i></a></span>
+                        <span class="pull-right"><a data-toggle="modal" href="<?= base_url('C_comment/del/'.$rep->commentID.'/'.$rep->knowledgeID.'/'.$knowledge->divisionID)?>"><i class="fa fa-trash-o"></i></a></span>
                       </div>
                     <?php } ?>
                     <div class="clearfix"></div>
+
+                    <div class="modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                    	<div class="modal-content">
+                    	  <div class="modal-header">
+                    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    		<h4 class="modal-title">Delete Comment</h4>
+                    	  </div>
+                    	  <div class="modal-body">
+
+                    		Are you sure to delete this comment </br>
+                        "<?= $rep->content ?>"
+
+                    	  </div>
+                    	  <div class="modal-footer">
+                    		<button data-dismiss="modal" class="btn btn-default" type="button">No</button>
+                    		<a href="<?= base_url('C_comment/del/'.$rep->commentID.'/'.$rep->knowledgeID.'/'.$knowledge->divisionID)?>"><button class="btn btn-danger" type="button"> Yes</button></a>
+                    	  </div>
+                    	</div>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <?php } ?>
@@ -78,5 +103,26 @@
               </div>
       </div>
     </section>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">Delete Confirmation</h4>
+	  </div>
+	  <div class="modal-body">
+
+		Are you sure to delete knowledge with title <?= $knowledge->title ?>
+
+	  </div>
+	  <div class="modal-footer">
+		<button data-dismiss="modal" class="btn btn-default" type="button">No</button>
+		<a href="<?= base_url('C_knowledge/delete/'.$knowledge->knowledgeID) ?>"><button class="btn btn-danger" type="button"> Yes</button></a>
+	  </div>
+	</div>
   </div>
 </div>

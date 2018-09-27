@@ -9,7 +9,7 @@
             <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
             <div class="form-group">
             <select class="form-control" name="category">
-              <option>Kategori pencarian</option>
+              <option>Search Category</option>
               <option value="topic">Topic</option>
               <option value="userID">Upload by</option>
             </select>
@@ -33,7 +33,7 @@
       <div class="col-md-12">
         <table class="table table-hover personal-task" style="border-collapse: collapse;">
             <tr>
-              <td class="btn btn-primary fa fa-plus col-lg-12" colspan="5" style="text-align: center" data-toggle="modal" href="#myModal"> Create New Discussion</td>
+              <td class="btn btn-success fa fa-plus col-lg-12" colspan="5" style="text-align: center" data-toggle="modal" href="#myModal"> Create New Discussion</td>
             </tr>
             <thead>
               <tr style="background-color: #2A3542">
